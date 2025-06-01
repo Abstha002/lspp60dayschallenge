@@ -3,7 +3,7 @@ print("hello world!!")
 
 
 #input test
-x = int(input("Enter the value for x: "))
+x = int(input("Enter the value for x(even or odd): "))
 if x % 2 == 0:
     print("Even")
 else:
@@ -11,7 +11,7 @@ else:
 
 
 #prime number test
-num = int(input("Enter a number: "))
+num = int(input("Enter a number(prime or not): "))
 
 if num <= 1:
     print(" not a prime number")
