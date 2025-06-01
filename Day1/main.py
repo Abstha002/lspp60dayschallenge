@@ -26,3 +26,11 @@ else:
         print("prime number")
     else:
         print(" not a prime number")
+
+
+#factorial of certain number
+fact_num=int(input("Enter the number for fact:-"))
+temp=1
+for i in range(1,fact_num+1):
+    temp*=i
+print("factorial of number is ",temp)
