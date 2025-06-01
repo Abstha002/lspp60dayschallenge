@@ -1,0 +1,9 @@
+Today i went through the python basics. 
+i found out that in python we don't need to specifically mention the variable type.i went through various loop used in python
+and found it very easier than traditional languages like c/c++ . i went through the control statements also. 
+
+
+i found out that i have to use int(input()) for input as a number .
+
+One thing that was very new to me was that in python we have "for loop " that needs with else also this amazed me as this is not 
+present in any other program languages
