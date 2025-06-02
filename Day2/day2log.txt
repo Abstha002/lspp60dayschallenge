@@ -1,0 +1,35 @@
+Day 2 of learning with lspp 2 
+
+Start with python in function 
+    syntax goes as
+        def functionName(Args):
+            //statements to run 
+    
+    -Focus point =>def(keyword),Proper indentation
+
+Wanted these function go alongs in the line of AI/MI so try these programs
+ 1.palindrome plus a vowel weight checker
+    learned -> text[::-1] => this reverses the strings
+            ->string method(len() gives length
+                             lower(),upper() 
+                             title()=>capitalize first letter
+                             strip()=>removes blank parts
+                             split(),join()=>method for joining and spliting the text   
+                             )
+            ->generator statement =>sum(1 for char in text if char in "aeiou")= checks if text contains vowel
+                                     then 1 for each vowel and sums it up
+                                    A generator expression is a compact way to create an iterator that yields
+                                    values one by one, as needed (i.e., lazily), without creating a full list in memory
+            ->ternary expression=>A ternary expression is a compact way to write an if-else statement that returns a value
+    
+
+ 2.Cost estimator 
+    learned -> dictionary => D.S that store value in key value pair 
+                            look and feels like Json object but thing is json stores string only this store any types
+
+3.Json module 
+    learned-> would be most used in the field of web request and API responses. 
+            we have method like =>(
+                json.dump(pythonDictonaries)=>converts a Python dictionary to a JSON object and writes it to a file.
+                json.load(jsonObject)=> reads a json file and converts to python dictionary
+            )
