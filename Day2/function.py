@@ -5,7 +5,7 @@ def printer():
 printer()
 
 
-#ppalindrome plus a vowel weight checker
+#ppalindrome plus a vowel weight checker.
 def classify_text(text):
     text = text.lower().replace(" ", "")  # string method .lower(lowercase all the letter) and . replace(replace blank space with empty)
     # Check palindrome
