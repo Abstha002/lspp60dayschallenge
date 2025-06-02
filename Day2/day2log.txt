@@ -5,7 +5,7 @@ Start with python in function
         def functionName(Args):
             //statements to run 
     
-    -Focus point =>def(keyword),Proper indentation
+    -Focus point =>def(keyword),Proper indentation.
 
 Wanted these function go alongs in the line of AI/MI so try these programs
  1.palindrome plus a vowel weight checker
