@@ -1,0 +1,30 @@
+Lists and Dictionaries
+    Day 3 would be fully focused on List and Dictionaries of the python program.
+    Why Lists and Dictionaries matters?
+        Reasons found are:-
+        for list
+            Store data like training examples, features, or predictions
+            Easy to loop through and process in ML models
+            Used to batch data for training neural networks
+        for Dictionaries
+            Store structured data, like model settings or word-to-index mappings.
+            Help organize data clearly and make it easy to look things up.
+    Key Notes:-
+        List and array are similar but different List can store different data type but array stores only one Data type.
+        Array are most used as from numpy.py module(Python library for fast and efficient numerical computations)
+
+    From question 
+        =>append() only works on list does works on dictionaries in dic.. DName[key]=value init
+        =>max() and min() function works on both list and dictionaries
+        => .items() gives you key and value from a dictionary.
+        =>enumerate() gives you index and item from a list (or any iterable).
+        ->Lambda function()
+        syntax->lambda arguments: expression
+            It's a small anonymous function (a function without a name).
+            Usually used for short, simple functions.
+            Can take any number of arguments but only one expression.
+            The expression’s result is automatically returned.
+            Eg->lamba x,y:x+y=>gives sum of x and y
+        ->sorted() builtin function 
+                syntax=>sorted(iterable, key=None, reverse=False)
+                
