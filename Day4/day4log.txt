@@ -1,0 +1,48 @@
+ Day 4 lspp
+ Today i learned and used jupyter notebook and found its shortcut and usecase and other platform like juypter note book
+
+ `Data Science and Web Development are distinct, but they complement each other and often 
+ work together in real-world applications.`
+
+ jyputer notebooks 
+ what is jupyter notebook -> Jupyter Notebook is an open-source web-based application that allows you to write and run code interactively, especially in Python. It’s very popular in data science, machine learning, data analysis, and education.
+ what is jupyter labs-> it is just a refined version of jyputer notebook
+ Ananconda distribution software gives us the benefit that not only juypter other software also comes with it.
+
+ python utility -> pip  
+ learned to create virtual environment in python why virtual environment 
+    ->python3 -m venv venv (for mac)
+        ->source venv/bin/activate 
+        ->deactivate 
+    why virtual env
+        -> avoid conflicts(different version of package,system clean)
+
+Here in juypter lab 
+ This .ipynb extension in juypter stands for (interactive python notebook)
+     in juypter we have Markdown => stands for note
+                                        Code=> executable shell
+        shorts cuts in juypter 
+            Markdown
+                # Main Heading 
+                ## subheading
+                ### small heading 
+
+                --- ( This draws line)
+
+                (shift + enter ) =>  executes and goes to new shell
+                (ctrl + enter) => executes and stays in the same shell
+
+                shell above (Key = A)  
+                shell below(Key = B)  
+                MarkdownKey = M)  
+                shell code Key = Y)  
+    
+                using Esc arrows to go up and down
+                 press  DD for deleting the codes
+
+
+Google colab 
+    => powered by google where numpy and other library are already installed
+Kaggle 
+    =>is another software that would be used for datasets 
+    => kaggle also provides markdown and code(notebook)
