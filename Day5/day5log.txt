@@ -1,0 +1,58 @@
+LSPP Day 5
+ 
+Today i learned the following :-
+
+Data Science (Overview)
+    => Data science is all about mathematics
+    From a bird i view Data science is all about mathematics concept
+
+    Data science is all about making data work for you  meaning collect all data from source and generate an perfect 
+    or needed conclusion from certain operation
+
+    Every thing you do and see in the internet is all about data. 
+
+
+    Data science 
+        AWS bills , Employee cost 
+        finding major point like D-Dos attack Fraud dectation and all is data science
+
+        "Predict Future" (eg:- predicting future)
+
+        From my point of view why data science is popularity it is because as mathematical models are in computerized
+         form it is easy for the calculations so it has gained massive popularitys
+
+Steps in Data science
+    1. Collect Data + Store Data 
+    2.Data preparation( Cleaning , missing data formats ) 
+    3.Visualization & Exploration(Dashboards comparissions)
+    4.Predictions and experiments(ab testing , forecast )
+
+
+Starting Numpy
+    [1,2,3,4,5,6] =>vector or array
+    [[1,2,3],[4,5,6]] =>Matrix
+
+    When it is difficult to call any N-dimension matrix it is called as tensor
+
+    Found out matrices that whole machine learning foundation is based in matrices.
+
+    Found out Numpy is totally built in c++.and Python is just a layer above  cpp
+
+  pytorch => deep learning library (trains models and all)
+
+  Numpy code
+   in python it is called list but numpy  it is called numpy array 
+found out numpy array is way fast than normal list
+   method of numpy
+    ->np.array([]) => generate array
+      fancy word for number scalar
+    ->np.arange()=> this gives the range of the numbers
+    ->np.zeros((3,4))=> generate matrix with 3*4 
+    ->np.ones((dim))=>1 matrix
+    ->np.full(dim,value)=> dimension with constant value
+    ->np.random
+        ->np.random.random((dim))
+        ->np.arange(0,10,steps(2))
+
+
+    
