@@ -1,0 +1,32 @@
+  LSPP Day 6
+ 
+ Today i learned this following things :-
+    -> array.shape:-gives rows and column 
+        array.ndim:- gives in dimension
+        array.size:-total number of element in the array 
+        array.dtype:- gives Data type
+
+
+        Array reshaping
+          array.reshape(dimension)=> this reshaped this array in prefered dimension
+          array.flatten()=> this flattend the array
+          array.ravel()=> this give the original array ,You want performance, no copy unless needed
+
+          Index and slicing
+          Slicing basic in python 
+                  array[index:index]
+                  array[index:index:steps]
+                  array[-2]
+              arr_2d
+                accessing arr_2d 
+                  arr_2d[1]=> this gives row 1 of the matrix
+
+                np.sort(unsorted) => this takes unsorted as input and sorts it
+                np.sort[arr-2d_unsorted, axis=1) 0 is column 1 is row
+
+                filtering array
+                number[numbers%2==0]
+                  we can write expession inside in this [] using numpy
+                  in mask we can store whole expression for the evalution like
+                    mask=number>5
+                    then it will be like numbers[mask] this is give by numpy found this so so useful
