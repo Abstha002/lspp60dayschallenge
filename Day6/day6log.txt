@@ -30,3 +30,41 @@
                   in mask we can store whole expression for the evalution like
                     mask=number>5
                     then it will be like numbers[mask] this is give by numpy found this so so useful
+
+                    fancy indexing indexing in numpy
+            indices=[0,2,4]
+            where_result=np.where(numbers>2)) 
+
+            condition_array=np.where(numbers>5,"true","false") this is like 
+              if(numbers>5){return ture}else{false}
+              
+              code snippets
+              arr=np.random.randint(0, 100, size=12)
+                print("True array",arr)
+                print("Basic slicing :-",arr[2:9])
+
+                resphaped=arr.reshape((3,4))
+                print("sorted data in column \n",np.sort(resphaped,axis=1))
+                print("sorted data in row \n",np.sort(resphaped,axis=0))
+
+                arr_2=np.arange(50)
+                mask=arr_2%11==0
+                print("Filtered valued after using Mask",arr_2[mask])
+
+                resultwhere=np.where(arr>50,"true","false")
+                print(resultwhere)
+
+
+
+                how to combine array
+                  np.concatenate((arr1,arr2)) this joins two array
+                
+                array comptability
+                  a.shape==b.shape
+
+                  add row in the matrix
+                   .vstack(original, new_col)=>add rows
+                   -hstack(original,new_col)=> add columns 
+                    np.delete(array, index)=> this returns the new array after deletion
+
+    
