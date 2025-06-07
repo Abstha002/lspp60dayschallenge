@@ -1,0 +1,60 @@
+Lspp day 7
+
+Today i learned the following;-
+    i started with the advance numpy operation using business data.
+        => i created the datasets firstly and did all the operation ont this data only
+                sales = np.array([
+                    [1, 132489, 145237, 138442, 152380],
+                    [2, 121845, 129674, 141293, 158104],
+                    [3, 142003, 137859, 149230, 160981],
+                    [4, 134200, 130176, 139847, 148560],
+                    [5, 126309, 135048, 132200, 140785],
+                    [6, 138947, 142731, 147895, 155002],
+                    [7, 124583, 128947, 135670, 142390],
+                    [8, 129384, 137591, 141809, 149382]
+                ])
+
+
+                array[:,1:] => this gives a all the rows and column starting from 1 index
+                np.sum()=> this sums all the that is give to it
+                np.min()=> gives the min in sales number in dataset
+                np.max()=> gives maximum  in sales
+                np.mean()
+                np.cumsum()=> this gives the cumulative sales
+
+
+                plt.figure(figsize=(10,6)) => This generate the layout
+                plt.plot() this plots the  values given
+                plt.title("Give the title")=> generate the title
+                plt.xlabel() => label offer x
+                plt..ylavel()=> lavel for y
+                plt.gird()
+                plt.show()
+
+                what is vector
+                    =>In mathematics and computer science (especially in NumPy, data science, ML, etc.), a vector is simply a 1-dimensional array of numbers.
+
+
+                np.dot(vec1,vec2)=> this gives the dot product 
+                np.linalg.norm=> magnitude and .norm normilizes
+
+                np.vectorized=>np.vectorize is a NumPy utility that turns a regular Python function into one that works element-wise on arrays.
+
+                The concept of boardcasting is like numpy knows when a operation is to be perform on array it should perfrom on each and every element present in the array
+
+
+                vector codesnipts
+                                vector=np.array([1,2,3])
+                                vector2=np.array([1,2,3])
+
+                                print("ADDed",vector+vector2)
+                                print("multied",vector*vector2)
+
+                                vectorized=np.vectorize(lambda vector:vector*2)
+                                print("Vectorize",vectorized(vector))
+
+                                # Boacasting concept
+                                monthly_avg=sales[:,1:]/12
+                                print(monthly_avg)
+
+                
