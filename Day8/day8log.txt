@@ -1,0 +1,51 @@
+LSPP Day 8
+
+I started with numpy for today a doing image manipulation using matplotlib and numpy
+Point to note:-
+    numpy is the based of various major library like pytorch and pandas
+    np.save("filename", value(array))=> this generate a file and save it in the same directory
+    np.load("filename")=> this load the file into the program
+
+   plt.subplot(121)  => Same as plt.subplot(1, 2, 1) (rows,cols, index) 
+    =>subplot is used to display multiple plots (charts/graphs) in a single figure window, arranged in a grid layout.
+    
+    plt.imshow()=>
+                  plt.imshow() is a Matplotlib function used to display images or 2D arrays as a visual grid of pixels (like heatmaps or actual image files).
+     
+
+     Used Pillow module and learned many methods of pillow such as 
+            Image.open(path)=> Opens an image file from some dir
+            img.save("file.jpg")=> Saves the image  into the same dir               
+            img.show()=>Displays image in default viewer 
+            img.close()=>Closes the image file            
+
+        img.size((w,h))=> this resize image into different size
+        img.crop((top,button,left,right))=> cuts or crop the image 
+        img.rotate(angle)=> rotate the image by certain angle
+        img.transpose(method)=> flips image of what ever is asked to do 
+            eg:-# Flip horizontally
+                        img.transpose(Image.FLIP_LEFT_RIGHT)    
+
+        img.convert()=> the converts image to following "L" for grayscale "RGB" for colored and "RGBA" colored with opacity
+
+
+        Image filter were also available
+            img.filter(ImageFilter.BLUR) yesma .show() yetai lagawona pani milxaa haii taa sathi
+            img.filter(ImageFilter.CONTOUR)
+            img.filter(ImageFilter.SHARPEN)
+
+
+            filters = [
+                ImageFilter.BLUR,
+                ImageFilter.CONTOUR,
+                ImageFilter.DETAIL,
+                ImageFilter.EDGE_ENHANCE,
+                ImageFilter.EMBOSS,
+                ImageFilter.FIND_EDGES,
+                ImageFilter.SHARPEN,
+                ImageFilter.SMOOTH
+            ]
+
+            These are all the available filter in pill
+
+            and importantly display() is used to display in the console onlyy
