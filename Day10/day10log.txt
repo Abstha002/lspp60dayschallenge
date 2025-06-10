@@ -1,0 +1,58 @@
+LSPP Day 10
+
+Today i enrolled in the course  "ChatGPT Prompt Engineering for Developers" 
+By:-Isa Fulford of OpenAi and Andrew Ng of Deeplearning.ai
+"https://learn.deeplearning.ai/courses/chatgpt-prompt-eng/lesson/dfbds/introduction"
+
+I learned today the followings :-
+    There are two types of Large Languages models(LLMs)
+        =>Base LLM
+                It was created to predict the next word based on text training data. 
+                 (fully trained of data available in internet)
+        =>Instruction Tuned LLM
+                Instruction tuned llm has been tune to follow pure instruction
+                found out that instruction tuned llm has its base as Base LLM and on top of that it is trained by providing inputs and outputs and fine tune on the basis of good attempts
+            It is further fined using 
+                RLHF:Reinforcement learning with human feedback
+
+                Instruction tuned is set to be Helpful, Honest and Harmless
+
+The course teaches based on the Instruction tuned LLM 
+    Principle and tactis for
+        principle 
+            => Write clear and specific instruction 
+            => Give Model time to think
+
+
+            First tactics 1: use delimiters(""", tag,---,...)=> create the perfect separation
+
+delimiter helps out with prompt injection that is like conflicting instructions to that should not be followed
+
+Tactic 2:Ask for structured output(json, or html)
+Tactic 3: Check whether conditions are satisfied and check assumptions required to do the task
+
+Tactic 4:Few -shot prompting
+            give an example and on the basis of that let it know to performance 
+
+    =>Give model time to think 
+        -> tactic 1:-> tell it to do step by step method 
+        -> tactic 2:->instruct the model to work out its own solution do reasonings
+
+        Model limitations while developing application point to be noted.
+                Hallucination=>jpt answer not fixed
+
+                to find correct question ,relevant info 
+
+                
+            
+
+        
+
+
+
+
+
+        
+
+          
+
