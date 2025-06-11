@@ -1,0 +1,70 @@
+LSPP Day 11
+Part 2 of  "ChatGPT Prompt Engineering for Developers" 
+By:-Isa Fulford of OpenAi and Andrew Ng of Deeplearning.ai
+"https://learn.deeplearning.ai/courses/chatgpt-prompt-eng/lesson/dfbds/introduction"
+
+I learned today the followings :-
+Iterative Prompt Development
+     It kinda works in circle 
+        1.Idea
+        2.Implementation
+        3.Experimental result
+        4.Error Analysis
+
+prompt Guidelines
+    1.Be celar and specific
+    2.Analyze why result does not give desired output 
+    3.Refine the idea and the prompt
+    4.Repeat
+
+Guide it proper using what specifically do you what from the answer like you could be wanting only TL;DR then mention it proper that you only need the tl;dr of the following
+
+LLM uses tokenizer to interpret text available to them 
+
+Prompt -> analyze -> clarify->prompt -> analyze->clarify->prompt until you get what you what.
+
+found out 
+    "from IPython.display import display, HTML
+    display(HTML(response)) "
+
+    This is used to display response or data in html format rather than raw format. 
+
+    other available from ipython.display are from IPython.display import Image, Markdown, Latex, Audio, JSON
+
+# Display an image
+display(Image(url="https://example.com/image.png"))
+
+# Show markdown
+display(Markdown("**Bold Text**"))
+
+# Show LaTeX
+display(Latex(r"\frac{a}{b}"))
+
+# Play audio
+display(Audio("audio.mp3"))
+
+# Show JSON
+display(JSON({'name': 'Alice', 'age': 30}))
+
+
+3rd video of course 
+    summarize
+
+    There the LLM could be used in the way like if the ecommerce has thousand of review we could use summarize the product sight
+
+using loops could go step by step
+
+4th video of course
+inferring
+machine learning algorithm uses inferring without training model without need huge dataset.
+Inferring in prompting is all about  asking a language model  to draw conclusions, make guesses, or understand meaning from a given piece of text — even if that meaning isn't directly stated. It's a way of getting the model to "read between the lines.
+
+
+
+check out jyupter notebook :- 
+https://s172-29-94-196p8888.lab-aws-production.deeplearning.ai/notebooks/l3_iterative_dev/Untitled.ipynb?kernel_name=python3
+
+
+
+
+
