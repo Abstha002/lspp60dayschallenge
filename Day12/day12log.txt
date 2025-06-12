@@ -1,0 +1,73 @@
+LSPP Day 12
+
+Part 3 of  "ChatGPT Prompt Engineering for Developers" 
+By:-Isa Fulford of OpenAi and Andrew Ng of Deeplearning.ai
+"https://learn.deeplearning.ai/courses/chatgpt-prompt-eng/lesson/dfbds/introduction"
+
+6th Video
+Transforming
+from this video i learned :-
+    LLM are very good in transforming one input to different format . 
+    like if you write something in nepali LLM can translate that into very different languages . 
+
+    OR like change HTML TO JSON
+    
+    we can make a universal languages translator like multi languages into english using for loop like in dictonary of different lanaguauge
+
+    we can manipulate language like a Formal or Informal and others
+
+    we can use the model to correct grammeratical error alsoo.
+     
+    Proofread is the most used one.
+    
+    7th video 
+    Expanding
+    from this video i learned :-
+        how we can generate personalized email based on the some reference
+        
+        Input parameter :-
+            Temperature:- range between 0 to 1 (0 being the safest and 1 being the wildest) 
+
+            If we are building a realiable application then it is good to used temperaute 0 as here is no randomness strictly what is best
+
+            if we are building a creative  application then the temp can be above 0.5 or above
+
+    juypter notebook panel 
+    Panel is a Python library for building interactive dashboards and GUIs especially great for data apps, visualizations, and even chat interfaces right inside a Jupyter notebook, JupyterLab, or in a browser.
+    panel code
+ '"""
+         import panel as pn
+pn.extension()
+
+slider = pn.widgets.IntSlider(name='Value', start=0, end=100)
+
+@pn.depends(slider)
+def output(value):
+    return f"You selected: {value}"
+
+dashboard = pn.Column(slider, output)
+dashboard
+"""
+
+    8th video
+        building a chatbot  using chatgpt
+
+        first we define the structure of the message system
+            context=[
+                {
+                'role':'system'
+                'content':""" description( give knowledge to chatgpt for reference "
+                }
+            ]
+
+
+            using these context i can learned to create the chatbot for myself 
+
+summary of the course 
+    principles:_
+        write clear and specific instructions
+        give the model time to "think"
+        iterative prompt development
+        capabilites :summarzing, iferring, transforming, expanding
+        building chat bot
+
