@@ -1,0 +1,85 @@
+LSPP Day 13
+
+Today i learned about the Scikit-learn:-
+    Scikit-learn is a free and easy-to-use Python library that helps you build machine learning models. It provides tools to do things like sorting data into categories (classification), predicting numbers (regression), grouping similar items (clustering), and preparing data before using it. It includes popular algorithms like decision trees, random forests, and support vector machines. Scikit-learn is great for beginners because it has a simple and consistent way to train, test, and improve models. It’s often used with other Python tools like NumPy and pandas to work with data more easily.
+
+sklearn is often known as father of machine learning.It is considered the core library for machine learning.
+
+Machine learning algorithm there are three part
+
+    Representation
+        -> Method used to configue data to be later assessed 
+        -> Evaluation -Evaluting the validity of a hypothese aand making assessments.
+        ->Optimization- process of tuning hyperparameters to increase model accuracy.
+
+we bring in data using pandas, for beautiful represent with have matplotlib
+and calculate needs numpy
+
+scikit -learn 
+comes with  support for many supervised learning algorithms
+    ->Supervised learning means teaching a computer using examples that      already have the correct answers, so it can learn to predict those answers for new data.
+
+various cross validation methodolgies
+    ->Cross-validation is a method to check a model’s performance by splitting the data into parts, training on some, and testing on the rest multiple times.
+
+large spread of unsupervised algorithms
+    =>Unsupervised learning algorithms find patterns or groupings in data without using labeled answers (no right or wrong given).
+
+sample datasets like IRIS ,Boston house price etc
+
+supports for feature extaction like bag of words and more
+    =>Feature extraction means turning raw data (like text, images, or sound) into numbers (features) that a machine learning model can understand and use.
+
+Supports for algorithms
+    supervised learning
+        weather predict could be better example for (regression,classification) 
+            Naive Bayes Algorithm 
+            Decision Trees
+            K-nearest neighbors 
+            support vector machines(svms)
+            random forst algorithm
+    unsuprevised learning
+        clustering and association(like recommendation )
+                clustering
+                Gaussain mixture models
+                neural network
+                Biclustering
+                Density estimation
+    
+Application of scikit -Learn
+            Every domain uses sklearn
+                Product development
+                neuroimaging
+                Medical modeling
+                financial risk analytics
+                Price predictions etc..
+
+
+Advantage 
+    -> Very versatile in terms of devising applications across Various other technical and non-technical domains
+    -> backed by many talented people
+    ->Scikit -learn comes with a very elaborate API documentation for ease.
+
+    Disadvantage 
+        ->Scikit -learns ML models don't scale very well linearly.
+                -> doesn't matter of small project 
+        -> Tedious hyperparameter turning and optimization
+                ->Hyperparameter tuning means trying different settings (like            learning rate, tree depth, number of neighbors, etc.) to find the        best version of your machine learning model.
+        -> Needs better model performance reporting capabilites
+                -> a bit hard to track the model
+
+
+K-Nearest Neigbour Algorithm
+    its all about surrounding data calculation like if timro talent haru xaa bhane you as also be assumped as a talent one based on the your friends
+
+
+
+
+
+
+
+
+
+
+
+
