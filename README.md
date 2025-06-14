@@ -5,7 +5,7 @@ Welcome to my **60-Day Learning 2025 Challenge** repository! This project is par
 ## About Me
 - **Name**: Abhay Shrestha
 - **Goal**: Land an internship in AI/ML or DevOps by enhancing technical skills and networking.
-- **X Handle**: [x.com/abhay_shresthaa]
+- **X Handle**: [@Abhay_shresthaa]
 - **Contact**: [abhayshrestha18@gmail.com]
 
 ## Project Overview
