@@ -1,0 +1,86 @@
+LSPP Day 14
+
+Today i learned the following
+    i started with KNN in depth where i learn points like
+        KNN(K-nearest neighbour algorithm)
+            Input data ins indexed to find the closed niegbors.
+            Data is compared in the inferecein gphase to save time.
+            Belongs to the category of lazy leaerners!
+        KNN classification
+
+            i learn that it is very important to check if the data is clear or no and this can be done using 
+                ->.isna() (from pandas)
+                example case is like if the column of number there arives a string that would disrupt the data flow.
+
+                important part is you should train most data than you such for test best ratio could be like (7:3)
+
+Model fitting
+    -> Model fitting is the process where a machine learning model learns patterns from the training data.
+It uses input data and known outputs to adjust itself so it can make accurate predictions.
+
+Model evalution 
+                ->Model evaluation checks how well a trained model performs on unseen or test data.It helps measure accuracy, error, or other metrics to see if the model is reliable.
+
+steps of Machine learning
+1.import python tools
+2.load dataset
+3.clean dataset
+4.convert string into numbers
+5.split the data into features and target
+6.split the data into train and test sets
+7.Trained a Knn model
+8.make prediction 
+
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score, classification_report
+
+train_test_split
+Splits your dataset into training and testing parts to evaluate model performance fairly.
+Helps prevent overfitting by testing on unseen data.
+
+KNeighborsClassifier
+A machine learning model that classifies data points based on their nearest neighbors.
+Simple and effective for many classification problems like Iris.
+
+LabelEncoder
+Converts categorical labels (like species names) into numeric form for model compatibility.
+Allows algorithms to work with non-numeric target variables.
+
+accuracy_score and classification_report
+accuracy_score measures the overall correctness of model predictions as a percentage.
+classification_report gives detailed metrics (precision, recall, f1-score) for each class.
+
+
+
+
+Description of result metrics
+    Accuracy:
+The percentage of total correct predictions out of all predictions made.
+Shows how often the model is right overall.
+
+Precision:
+Of all the times the model predicted a class, how many were actually correct.
+Measures how careful the model is when it says “yes.”
+
+Recall:
+Of all actual instances of a class, how many did the model find.
+Measures how good the model is at catching all true cases.
+
+F1-score:
+The balance between precision and recall in a single number.
+Helps when you want to consider both false positives and false negatives.
+
+Support:
+The number of true instances of each class in the test data.
+Shows how many examples the model had to predict for that class.
+
+
+ 
+            Random point
+            .head() -> gives 5 rows and parameter can also be given
+            model.predict()-> this returns a numpy array
+            le.inverse_transform([pred_num])[0]-> maps out 0 to setosa likewise
+            
+
