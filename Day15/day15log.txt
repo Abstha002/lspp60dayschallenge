@@ -1,0 +1,243 @@
+LSPP Day 15
+
+Today i learned the following
+GridSearchCV
+        It tries different values for your model’s settings (like k in KNN) to find the best one using cross-validation.
+        syntax
+            # 1. Define parameters to try
+            param_grid = {'n_neighbors': [3, 5, 7]}
+
+            # 2. Setup GridSearchCV
+            grid = GridSearchCV(KNeighborsClassifier(), param_grid, cv=5)
+
+            # 3. Fit and view best
+            grid.fit(X_train, y_train)
+            print(grid.best_params_, grid.best_score_)
+
+        this works like 
+                                    “Try KNN with k = 3, 5, and 7.
+                            For each one, split the data into 5 parts, train on 4, test on 1 — repeat 5 times.
+                            Then pick the value of k that gives the best average accuracy.”
+
+
+Cross Val Score
+        It tests your model many times on different parts of the data to see how well it performs on average.
+        syntax
+        # 1. Import function
+                from sklearn.model_selection import cross_val_score
+
+                # 2. Run CV scoring
+                scores = cross_val_score(KNeighborsClassifier(n_neighbors=5), X, y, cv=5)
+
+                # 3. View average accuracy
+                print("Mean Accuracy:", scores.mean())
+
+            here the cross val score works like 
+                    If you write cv=5, it works like this:
+
+                    The data is split into 5 equal parts (called "folds").
+
+                    The model is trained on 4 folds, tested on the 1 left out.
+
+                    This repeats 5 times, each time using a different fold as the test set.
+
+                    The scores from all 5 runs are averaged.
+
+How .fit() differ in while using different models
+
+                .fit() in a model (like KNeighborsClassifier().fit(X, y))
+                Trains one model on the training data.
+
+                It fits the algorithm using the full X_train and y_train.
+
+                No comparison, no cross-validation.
+
+                Just one model is trained.
+
+                Think: “Train this specific model on this data.”
+
+.fit() in GridSearchCV
+                Trains many models using different parameter values, each evaluated using cross-validation.
+
+                It tries each combination of hyperparameters (like k=3, k=5, etc.).
+
+                For each combo, it does k-fold splitting, training/testing multiple times.
+
+                Then it selects the best one automatically.
+
+                Think:“Test many versions of the model, each with different settings, and pick the best.”
+
+
+Find out there are many Dataset like
+    "Iris": load_iris(),
+    "Wine": load_wine(),
+    "Breast Cancer": load_breast_cancer(),
+    "Diabetes": load_diabetes(),
+    "Digits": load_digits(),
+    "Linnerud": load_linnerud(),
+    "Olive Oil": fetch_olivetti_faces(),
+    "20 Newsgroups": fetch_20newsgroups(),
+    "California Housing": fetch_california_housing(),
+    "KDD Cup 99": fetch_kddcup99(),
+    "RCV1": fetch_rcv1(),
+    "Cover Type": fetch_covtype(),
+    "20 Newsgroups Vectorized": fetch_20newsgroups_vectorized(),
+    "LFW People": fetch_lfw_people(),
+    "LFW Pairs": fetch_lfw_pairs(),
+    "Olivetti Faces": fetch_olivetti_faces(),
+    "OpenML": fetch_openml(),
+    "Species Distribution": fetch_species_distributions(),
+    "Random Classification": make_classification(),
+    "Random Clustering": make_blobs(),
+    "Random Gaussian Quantiles": make_gaussian_quantiles(),
+    "Random Circles": make_circles(),
+    "Random Moons": make_moons(),
+    "Random Regression": make_regression(),
+    "Random Clusters": make_multilabel_classification(),
+    "Random Manifold": make_s_curve(),
+    "Random Swiss Roll": make_swiss_roll()
+
+
+
+Easy-to-Understand Descriptions of Sklearn Algorithms
+
+
+1. K-Nearest Neighbors (KNN)
+
+What is it?
+KNN is a simple algorithm that stores all training data and predicts the label of a new point by looking at the 'k' closest points around it. It assumes that things close to each other are similar.
+**What it does best:** Good for small to medium datasets with clear groupings, no complicated math needed.
+**Use case:** Classifying types of flowers or handwriting recognition.
+
+
+
+ 2. Decision Tree
+
+What is it?
+A decision tree is like a flowchart that splits the data step-by-step by asking yes/no questions based on feature values. At each step, it chooses the feature that best separates the data.
+**What it does best:** Easy to interpret and visualize; works well for both classification and regression.
+**Use case:** Deciding loan approvals or diagnosing diseases.
+
+
+
+ 3. Logistic Regression
+
+What is it?
+Logistic Regression predicts the probability of an event occurring by fitting data to a curve and applying a threshold. It’s called regression but is mainly used for classification problems.
+**What it does best:** Works great for binary classification when classes can be separated by a line or curve.
+**Use case:** Predicting if an email is spam or not.
+
+
+
+ 4. Random Forest
+
+What is it?
+Random Forest builds many decision trees on random subsets of data and features, then averages their predictions to improve accuracy and reduce overfitting.
+**What it does best:** Great accuracy and stability for complex datasets.
+**Use case:** Medical diagnosis, fraud detection.
+
+
+
+5. Support Vector Machine (SVM)
+
+What is it?
+SVM tries to find the best boundary (called a hyperplane) that separates classes with the largest margin between them. It can also use kernels to handle non-linear boundaries.
+**What it does best:** Powerful for high-dimensional and complex datasets.
+**Use case:** Image classification, text categorization.
+
+
+
+6. Naive Bayes
+
+**What is it?**
+A probabilistic classifier based on Bayes’ theorem that assumes features are independent, which is rarely true but works surprisingly well in practice.
+**What it does best:** Fast and simple, especially for text data like spam filtering or sentiment analysis.
+**Use case:** Email spam detection, document classification.
+
+
+
+7. Gradient Boosting
+
+What is it?
+An ensemble method that builds models one at a time, where each new model tries to fix errors made by previous ones, gradually improving performance.
+**What it does best:** Highly accurate predictions on tabular data but can be slower to train.
+**Use case:** Predicting customer churn, sales forecasting.
+
+
+
+8. AdaBoost
+
+What is it?
+AdaBoost combines many simple models (usually decision trees) by focusing more on the samples that previous models got wrong, boosting overall accuracy.
+**What it does best:** Improves weak classifiers, good when data is noisy.
+**Use case:** Fraud detection, face recognition.
+
+
+
+9. Linear Regression
+
+**What is it?**
+Linear Regression fits a straight line through data points to predict continuous values based on input features.
+**What it does best:** Predicting numbers where there is a linear relationship between inputs and output.
+**Use case:** House price prediction, salary estimation.
+
+
+
+10. Support Vector Regressor (SVR)
+
+**What is it?**
+SVR is like SVM but for predicting continuous outcomes instead of categories, trying to fit data within a margin of tolerance.
+**What it does best:** Non-linear regression problems with complex patterns.
+**Use case:** Stock price forecasting, temperature prediction.
+
+
+
+11. KMeans Clustering
+
+What is it?
+KMeans groups unlabeled data points into 'k' clusters by repeatedly assigning points to the nearest cluster center and updating centers.
+**What it does best:** Discovering natural groups in data without labels.
+**Use case:** Customer segmentation, market research.
+
+
+
+12. Principal Component Analysis (PCA)
+
+What is it?
+PCA reduces the number of features by transforming them into new combined features that capture most variance, simplifying the data.
+**What it does best:** Data visualization, noise reduction, speeding up learning.
+**Use case:** Image compression, simplifying datasets.
+
+
+
+13. DBSCAN
+
+**What is it?**
+DBSCAN finds clusters based on density — grouping closely packed points and marking sparse points as outliers.
+**What it does best:** Identifying clusters of any shape and handling noise.
+**Use case:** Anomaly detection, spatial data clustering.
+
+
+
+14. Extra Trees Classifier
+
+What is it?
+Similar to Random Forest but more randomized when splitting nodes, making it faster but sometimes less accurate.
+**What it does best:** Quick training on large datasets with noisy features.
+**Use case:** Text classification, quick prototyping.
+
+
+
+15. Quadratic Discriminant Analysis (QDA)
+
+What is it?
+QDA assumes each class has its own Gaussian distribution with its own covariance, allowing it to model more complex class boundaries than Linear Discriminant Analysis (LDA).
+**What it does best:** When classes are not linearly separable and have different variances.
+**Use case:** Medical diagnosis, speech recognition.
+
+How to Choose?
+            Start simple: KNN, Logistic Regression, Decision Tree
+            For better accuracy: Random Forest, Gradient Boosting
+            For complex data: SVM, AdaBoost
+            For unsupervised learning: KMeans, DBSCAN
+            For regression: Linear Regression, SVR
