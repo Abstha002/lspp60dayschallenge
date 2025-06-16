@@ -1,0 +1,127 @@
+LSPP Day 16
+
+Today i Learned
+So what is Ai actually?
+
+AI (Artificial Intelligence) is when computers or machines are made to think and learn like humans — so they can solve problems, understand language, recognize images, make decisions, and even improve over time.
+
+
+ML foundations 
+    1.Intelligence & Models 
+            =>requires understanding how the world works
+                so now to understand this complex world we need to develop model of the world
+            
+            so what is model
+                =>it is something that lets you make preductions
+
+so now there are two ways of learning these are 
+machine learning
+    (getting computers to do things without explicit instructions)
+
+    Machine learning 
+        allows computer to learn tasks diretly from data
+        training(phase 1) (fit a model's prediction to reality) 
+            training data -> learning algorith -> ml model
+        inference(using mdl to make predictions
+           new data -> ml model -> prediction
+
+           parameter is what defines how well the prediction is going to be in future.
+
+           Loss function = actual values - predicted values
+
+           our goal is to find parameter values with smallest loss
+
+           computers can fit models to reality using data and math
+
+
+The process of picking right input variable for you model is known as feature engineering
+
+Deep learning(dL)
+    =>deep learning specific type of machine learning which envolve training neural network which can learn optimal feature all no there own.
+
+connecting raw data with label we can training neural network which can do anything
+
+
+Neural Networks(NN)
+    A series of operations that can approximate (practically) any function 
+     building block of neural networks is neuron 
+        what neuron
+        =>it is a mathematical function 
+                => set of input * multiple by coresponding weights and then add bayes term and passes the function to non linear function (activation function)
+                z=> g(sumation(wi* xi +b)
+
+
+when we combine multiple neuron thats called a layer and 
+when we combine multiple layers that is called as a network
+
+the Above is called vanilla neuron 
+
+there is also another called 
+    => LSTM(long short term memory) neuron 
+            it is used for sequired data
+
+
+Training neural nets 
+    Searching for the parameters with the smallest lost 
+
+Fundamental goal of training is to minimize the decepency between our model prediction and reality which is equivalent to picking parameter which will eventually minize our loss.
+
+Gradient Descent
+    it is an algorithm which we use to minize our loss.
+        oi+1=oi-(gamma)(delta o Lo). o bhanako theta ho haii
+
+gaama bhanako learning rate
+
+optimizers 
+    => variations of gradient descent used in practice 
+
+hyperparameteres
+    =>Values that guidge the training process
+    these are not like model parameter but like what we set as a developer
+    epoch , learning rate , batch size, dropout
+
+
+way 3: Reinforcement learning (RL)
+    computer learn through trail and error. 
+
+    supervised learning
+        => fixed input and output
+
+    reinforcement learning is like the model directly does some task and on that task reviews are generated and based on review parameters are updated and the process goes on in circle
+
+The promise of RL
+Models are not bound by human labelling or expertise
+    it could surpass the level of human expertizes
+
+
+Algorithms might seem like the are the god father of ai/mi but they are not the one . the god father is the mighty " Data " himselffff
+
+
+what makes good data?
+property 1: Quantity 
+    more data is better than less data
+property 2:quality
+    have the data the faithfully represent reality is alway a plus point and very important (if not GIGO is bound to happen)
+    Accuracy=> correctness of data
+    Diversity=> representatives of data (all aspects is needed)
+
+main point
+=> solving problems requires an accurate model of the world 
+=>ML gives us a way to align model to reality using data+math
+=> DL use neural networks ot learn useful features and mapping from rew data
+=>RL allows computer to learn by intereacting with the world via trial and error
+=> To train good models, you need high -volume, high -quailty data
+
+
+another part 
+
+inference engine is the program the makes decision on the basics of knowledge base that they have
+expert system was to much closed system like it could just do one task
+
+
+machine learning stabilizes at one point even if you give more data whereas if you give a deep learning more data it will sign more and more
+note:-
+AI is an umbrella discipline that covers everything related to making machines smarter. Machine Learning (ML) is commonly used along with AI but it is a subset of AI. ML refers to an AI system that can self-learn based on the algorithm. Systems that get smarter and smarter over time without human intervention are ML. Deep Learning (DL) is a machine learning (ML) applied to large data sets. Most AI work involves ML because intelligent behavior requires considerable knowledge.
+
+
+
