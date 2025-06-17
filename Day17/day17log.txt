@@ -1,0 +1,104 @@
+LSPP Day 17
+
+Today i learned 
+=> what is the amount of supervision needed to train ML model
+    Types of ML
+        Based on amount of unsupervision needed
+            =>Supervised
+                    ->regression
+                            ->we are doing some calculation and the model predict the value in numerical data then 
+                            it is called as regression
+                    ->classification
+                            ->same as regression only thing being is the output is a categorical data
+            =>Unsupervised
+                    ->clustering
+                        ->divide tuples on the basis of features (N dimension)
+                    ->Dimensnality reduction
+                        ->It will remove some dimension features that are not necessary adding value and merge them into
+                         single dimension (feature exaction.-> why because we created new feature)(PCA)
+                        MNIST(later checking left for visualization)
+                    ->Anamonly Detection
+                            ->finding who does fit in the group (outlier)
+                    ->Association rule learning 
+                            ->it is like what association with each other( people who buys milk buys bread)
+                             
+            =>Semi-supervised
+                    -> it is partially unsupervised and partially supervised 
+                        so this is like input is feed to the system system classify or clustering those but
+                         without the label , to label these unlabel data supervision is need so it it like that
+
+            =>Reinforcement
+                    ->Human like learning. NO data is given it start from scratch and build up the knowledge base(Reward or punishment) 
+                        steps
+                            1. observe
+                            2.select action using policy
+                            3.action
+                            4.get rewards
+                            5.update policy(learning)
+                            6.iterate 
+
+Types of data (generally)
+    => Numerical Data
+        ->age 
+        ->weight
+        ->cgpa
+
+    =>Categorical Data
+        ->gender
+        ->nationality
+
+what is production 
+        => production is basically server on which the "ml model " is hosted on.
+Types of ML on the basis of production
+    Types
+        =>Batch machine learnig
+                ->In batch training whole dataset is trained at once.usually do in offline mode. once the model is trained you load the trained model
+                ->The model is totally static.
+                Drawback( model is must be retrained periodically,Lots of data,hardware limitation,availability)
+        =>Online machine learning
+                ->Online learning is done incrementally .it is given a small batch (small chuck of data ) it can be done in server itself.
+                Eg:- chatbots
+                
+
+        What to use what
+            1.Where there is concept drift?
+                =>if the nature of problem changes online learning is better
+            2.Cost Effective?
+                =>online learning is cost effective as small chuck is trained as batch learning
+            3.Faster solution 
+                => online learning is faster
+            
+    
+        how to implement
+            linear regression algorithm(linear_model)
+            SGDRegressor for online learning(offers fit and partial_fit
+            => River (python library for online machine learning)
+            =>vowpal wabbit( used for RL, as well as online learning)
+        
+        Learning Rate 
+            => how frequently data is trained
+
+        Out of core learning 
+            =>data is so huge you can't load into memory so here its better to use online learning. so divide into parts and train
+        
+        Cons of online learning 
+            Tricky to use
+                output is not sure and safe
+            Risky
+                No constraints of data and if not handle properly it would be trained on wrong data leads of failure of model
+
+                Types of machine learning on the basis of learning
+               => Instance Based Learning Model
+                    -> this is based on learning by memorizing like storing everything
+                        no concept of training or learning
+                    (KNN,kernel function, rbf)
+               =>Model based learning Model
+                    -> this is based on learning by pattern 
+                    -> its like it creates boundaries to differentiate rather than previos data points
+                        (Decisiontree..)
+
+                    instance based in also known as lazy learner (during model does nothing)
+                    
+
+
+
