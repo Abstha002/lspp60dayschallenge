@@ -1,6 +1,6 @@
 # 60-Day Learning Challenge 2025 with LSPP
 
-Welcome to my **60-Day Learning 2025 Challenge** repository! This project is part of the Leapfrog Student Partnership Program (LSPP) to master AI/ML, DevOps, AWS, Docker, and more, aiming for internships and community growth on X. Started on [Start Date, e.g., May 31, 2025], I’m documenting my journey day by day, building skills and sharing progress.
+Welcome to my **60-Day Learning 2025 Challenge** repository! This project is part of the Leapfrog Student Partnership Program (LSPP) to master AI/ML, DevOps, AWS, Docker, and more, aiming for internships and community growth on X. Started on [Start Date, e.g., June 1, 2025], I’m documenting my journey day by day, building skills and sharing progress.
 
 ## About Me
 - **Name**: Abhay Shrestha
@@ -16,7 +16,7 @@ This repository contains code, notes, and exercises from my 60-day learning plan
 Each day’s work is organized in a dedicated folder (e.g., `Day1`, `Day13`) with scripts, notebooks, and outputs.
 
 ## About the Challenge, Leapfrog, and LSPP
-The **60-Day Learning 2025 Challenge** is a personal initiative to accelerate my growth in cutting-edge technologies, inspired by the Leapfrog Student Partnership Program (LSPP). LSPP, offered by Leapfrog, a leading technology company in Nepal, empowers students like me to gain practical skills, collaborate with a global community, and compete for top 60 recognition. Leapfrog is renowned for its innovative software solutions and commitment to nurturing talent, providing a platform to explore AI/ML, DevOps, AWS, and Docker—fields critical for modern tech careers. This challenge, spanning from May 31, 2025, to [End Date, e.g., July 29, 2025], is my journey to build a portfolio, network on X, and prepare for internships, all while contributing to the LSPP community under the guidance of @lftechnology.
+The **60-Day Learning 2025 Challenge** is a personal initiative to accelerate my growth in cutting-edge technologies, inspired by the Leapfrog Student Partnership Program (LSPP). LSPP, offered by Leapfrog, a leading technology company in Nepal, empowers students like me to gain practical skills, collaborate with a global community, and compete for top 60 recognition. Leapfrog is renowned for its innovative software solutions and commitment to nurturing talent, providing a platform to explore AI/ML, DevOps, AWS, and Docker—fields critical for modern tech careers. This challenge, spanning from june 1, 2025, to [End Date, e.g., July 30, 2025], is my journey to build a portfolio, network on X, and prepare for internships, all while contributing to the LSPP community under the guidance of @lftechnology.
 
 ## Learning Journey
 ### Key Milestones
