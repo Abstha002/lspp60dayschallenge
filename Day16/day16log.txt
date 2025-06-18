@@ -3,7 +3,8 @@ LSPP Day 16
 Today i Learned
 So what is Ai actually?
 
-AI (Artificial Intelligence) is when computers or machines are made to think and learn like humans — so they can solve problems, understand language, recognize images, make decisions, and even improve over time.
+AI (Artificial Intelligence) is when computers or machines are made to think and learn like humans — 
+so they can solve problems, understand language, recognize images, make decisions, and even improve over time.
 
 
 ML foundations 

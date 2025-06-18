@@ -1,0 +1,54 @@
+LSPP Day 18
+Machine learning Development life cycle
+
+1.Frame the Problem
+    -> Define the boundaries of the problem.Research and analyze. Planning
+        Every question much be answered in this phase.
+2.Gathering the Data
+    ->Different sources of data (api, database, ...) 
+        Gathering required data and storing correct format
+3.Data Preprocssing
+    ->The gather data is messed so data preprocessing is need and it is done like in the way of removing duplicate, noise,outliers  , standarding the data
+4.Exploratory data Analysis
+    ->studing the relationship between input and output.
+    we do the analysis like (mean, variance and all things)
+5.Feature Engineering and selection
+    ->creating new features
+    ->selecting feature which is actually impactful
+6.Model Training Evaulation and Seletion
+    ->Try many different algorithms and deciding with is best.
+7.Model Deployment
+    ->Deploying ML model in server (binary file ma convert garera hunxa hai you chai)
+8.Testing
+    ->A/B testing(old/new)
+9.Optimize
+    ->Launch the model of scale 
+         before the we do 
+                (model back up, data backup, roll back automation,load balancing,retrainff)
+
+Note:-
+    Noise = random mistakes or errors.
+    Outlier = rare but real data point that stands out.
+    Imbalance dataset = some features  value more the other.
+    Metrics 
+        classification=Accuracy
+        regression=mean^2 error
+        clustering = derms index
+        Ensemble learning= joining different ML model to make powerful model
+        fNo of axis = Rank=No of dimension
+        Vectorization= changing the text into number in terms of NLP
+
+What is tensor?
+    tensor is just simply a data structure
+why tensor?
+    => most of the library uses tensor as there data structure.used of ML and DL. TensorFlow used in deep learning which uses tensor as data structure
+    
+    Tensor is container in which we store number.
+
+Tensor Example
+    1D Tensor -> a Student list [cpga,rank}
+    2D Tensor -> Two student list
+    3D Tensor   -> stock price of days for a year => 2d and of 10 years is 3d
+    4D tensor -> Images( RGB is 3D  tensor ) 50 RGB photo is 4D tensor
+    5D tensor-> Videos( 60 sec*30fps,3,480,720) 5 video
+
