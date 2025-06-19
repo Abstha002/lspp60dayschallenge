@@ -1,0 +1,24 @@
+LSPP Day 19
+
+Today i created the small project
+    firstly, i used numpy,panda and synethics dataset
+
+I used logistic regression(classification algorithm)
+    draw the line and on the basis of that line it is used.
+Steps that i followed are
+    0.preprocess+EDA+Features selction
+           for Preprocessing-> df.iloc for removing was used
+           for EDA -> used matplot lib
+    1.Extract input and output cols
+            used iloc for these
+    2.Scale the values
+             for this i used scalar.transform()
+    3.Train test split
+            for this i used sklearn train_test_split
+    4.Train the model
+                .fit()
+    5.Evaluate the model/model selection
+            accuracy checking garyooo
+    6.Deploy the model
+            pickle import and then 
+            pickle.dump( clf,open('modelname.pkl',"wb")) wb-> write binary mode            
