@@ -1,0 +1,109 @@
+LSPP Day 20
+
+Today i learned :-
+
+Streamlit
+    Streamlit is an open-source Python library used to create simple web apps for data science and machine learning.
+It lets you build interactive dashboards with very little code.
+You can display charts, tables, text, and user inputs easily.
+Just run your Python script, and Streamlit turns it into a web app.
+It's great for sharing data insights quickly.
+
+What the difference between fastApi and Streamlit
+    FastAPI is used to build backend APIs — it helps you create web services that handle requests and return data, usually in JSON.
+    Streamlit is for building interactive front-end apps — mainly used in data science to show results visually.
+    FastAPI focuses on speed, performance, and serving data.
+    Streamlit focuses on simplicity, visuals, and user interaction.
+    You can use both together: FastAPI for data logic, Streamlit for UI.
+
+About streamlit
+    Streamlit is not just a UI library.
+    It can handle both UI (front end) and backend logic in the same Python script.
+
+Some method most used in Streamlit are :-
+Text and Output
+st.write() – Displays text, variables, dataframes, etc.
+st.text() – Shows plain text.
+st.markdown() – Renders text using Markdown formatting.
+st.code() – Displays code with syntax highlighting.
+
+Data Display
+st.dataframe() – Displays interactive tables (sortable, scrollable).
+st.table() – Shows static tables.
+st.line_chart(), st.bar_chart(), st.area_chart() – Built-in charts for quick plotting.
+
+User Input Widgets
+st.button() – Adds a clickable button.
+st.slider() – Adds a slider to select a numeric value.
+st.text_input() – Gets user text input.
+st.selectbox() – Dropdown menu for selecting from a list.
+st.checkbox() – Checkbox input.
+st.radio() – Radio buttons for selecting one option.
+
+ File Handling
+st.file_uploader() – Lets users upload files.
+
+ Layout and Control
+st.sidebar – Add widgets to a sidebar.
+st.columns() – Create multi-column layouts.
+st.expander() – Add collapsible sections.
+
+Code snippets
+
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+st.title(":green[LSPP Day 20]")
+
+
+st.markdown("""
+### 🙌 Shoutout to **Leapfrog**!
+
+We’re grateful for this amazing 60-day challenge organized by **Leapfrog** —  
+a company that empowers learners to grow, explore, and build new skills every day.  
+Their support and vision make learning fun and impactful!
+
+---
+
+""")
+
+st.markdown(
+    """ 
+This is a playground for you to try Streamlit and have fun. 
+
+**There's :rainbow[so much] you can build!**
+
+We prepared a few examples for you to get started. Just 
+click on the buttons below and discover what you can do 
+with Streamlit. 
+"""
+)
+
+
+if st.button("Click me!"):
+    st.success("You clicked the button! 🎉")
+
+
+age = st.slider("Select your age:", 0, 100, 25)
+st.write(f"Your age is {age} years.")
+
+
+st.markdown("### Sample DataFrame")
+df = pd.DataFrame(
+    np.random.randn(5, 3),
+    columns=['A', 'B', 'C']
+)
+st.dataframe(df)
+
+
+st.markdown("### Sample Line Chart")
+st.line_chart(df)
+
+
+
+Random note 
+    ASGI stands for:
+        Asynchronous Server Gateway Interface
+
+Imparative code(flask) and declarative code (streamlit)
