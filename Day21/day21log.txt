@@ -1,0 +1,72 @@
+LSPP Day 21
+
+Today i learned
+     The process and way of data gathering.
+     Data format most using in ai/mi 
+        -> CSV file format (comman separate values)(random tsv -> tab separted value)
+        -> Json /sql
+        ->Fetch API
+        -> Web scraping
+
+Working with CSV 
+    .read_csv()-> is used 
+    
+    openinng a csv file from an URL requires a request module with the help of that require module we will fetch it out
+
+   2. Sep parameter
+        .read_csv('filename.tsv',sep="\t")
+            -> what this above code tell is like rather than separate the values with a comma separate the value with tab
+        
+    .read_csv also has the parameter name in which we pass the column and column name is mapped on to the columns
+
+    and .read_csv('file', header=1) is used when header is not properly mentioned and index we have to start clearly.
+
+   3. use_cols 
+    pd.read_csv('file',useCols=['colname']
+
+   4. Squeeze parameters
+    .read_csv('file',useCols=['colname'],squeze=True)
+     if written this then this turns into series rather than dataFrame of pandas
+     ``
+     df=pd.read_csv('Aug Train Data.csv',usecols=['gender'],squeeze=True)
+    df.head()
+    ``
+    the above code works before pandas older version now doesn't work 
+    ''
+    # Squeeze 
+df=pd.read_csv('Aug Train Data.csv',usecols=['gender'])
+df.squeeze()
+df
+'' 
+here pandas if possible squeeze them.
+
+
+5.skips row and nrows
+skips rows lets us skip rows and we can also skip like using lamba function logic
+
+
+6.Encoding parameter 
+    whenever we see Error:- "UnicodeDecodeError"  it should be understood that there is a encoding error.
+
+    use =>df=pd.read_csv('Zomato Data.csv',encoding='latin-1')
+                fdf.head(3)
+7.skip bad lines
+    read_csv('file',error_bad_line=True)
+    This skips all the bad useless lines
+8.dtypes parameter 
+    this changes the data type parameter which helps in saving memory.
+
+9.handling dates
+    .read_csv('file',parse_dates['date column name']
+
+10.na_values 
+    this is used to set Nan value when the data is called
+11.Loading huge dataset
+    dividing data data in chunksize
+    dfs = pd.read_csv('Aug Train Data.csv',chunksize=5000)
+
+
+Note
+            in pandas 
+        object is a string
+    
