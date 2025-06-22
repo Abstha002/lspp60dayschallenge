@@ -1,0 +1,40 @@
+LSPP Day 22
+
+Today i learned:-
+ Working with json
+    .read_json('file.name') 
+        this read the json file and then convert the json file into the dataframe.
+    
+    we can pass api link or path to the file
+
+ 
+ working with Sql
+    firstly download the sql file and then load it into the application 
+    and install mysqlconnector library
+    use pandas.read_sql_query("sql query", conn object)
+    sql query is proper sql connection.
+
+    Fetching Data from an API
+
+    From this also i used request library and fetch then converts the json into DataFrame and DataFrame into csv
+
+Web Scraping using BeautifulSoup
+
+BeautifulSoup is a Python library used for parsing HTML and XML documents. It allows you to navigate, search, and modify the content of web pages easily using Python code.
+it's commonly used in web scraping to extract data from websites, such as headlines, links, or product info, by working with the page's HTML structure.
+
+Example tasks:
+Extracting all links from a page
+Getting text from specific tags (like <h1> or <p>)
+Navigating nested HTML elements
+
+It works well with the requests library to download web page
+
+steps for that 
+Import Libraries
+ Define the Target URL
+ Send an HTTP Request and Get HTML Content
+ Parse the HTML Using BeautifulSoup
+ Find and Extract Desired Elements
+Save the Data to a CSV for AI Processing
+
