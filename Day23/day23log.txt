@@ -1,0 +1,49 @@
+LSPP Day 23 
+
+ Today i learned:-
+ Pytorch Bird eye view
+    pytorch is open source deep learning library using which we can create very powerful neural network.Developed by Facebook(Meta)
+    Origin of pytorch 
+        initial Torch (Scitific computing framework) which was created for tensor based operation to over come the draw Torch had pyTorch came into existence
+
+PyTorch first version was released in 2017
+    It was python compatable
+    it was dynamic computation graph    
+        Visual way of representing math operations
+            All the ML library stored the sub problem in term of graph which is known as computation graph
+    ONNX-> open neural network exchange
+    Model quantization -> compressed the model to less size than original size
+    Keras-> high level API for tensorflow . using keras we can manipulated the tensorflow
+    Pytorch Lighting-> High level API for pytorch
+    hugging face transformer-> it was written in pytorch
+
+Pytorch Version 2.0 
+    Optimized on latency and throughput
+
+Pytorch or Tensorflow
+    ->Pytorch works in python.it is more easyf
+    ->TensorFlow supports mulitple languages
+    ->tensorFlow wins on the context of deployment,industry,production
+
+Core Pytorch modules
+    torch 
+    torch.autograd-> for automatic differentiations
+    torch.nn-> main neural network library
+    torch.optim-> optimization library
+    torch.utils.data-> load datasets
+    torch.jit-> using for torch script
+    torch.distruted-> distributed training train on multi gpu env
+    torch.cuda-> special nvida gpu
+    torch.backends->helps you select different types of backends
+    torch.multiprocessing -> used for parallel processing
+    torch.quantization-> compresses the model
+    torch.onnx-> create onnx compatible model generation
+
+    Who uses pytorch 
+        Facebook -> Facebook app, insta app, meta ai research
+        Microsoft -> Azure machine learning
+        Tesla   -> Autopilot full written in pytorch
+        OpenAI -> Gpt series uses pytorch
+        Uber -> they has create there own pytorch wrapper called pyro.
+    
+
