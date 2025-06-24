@@ -1,0 +1,93 @@
+LSPP Day 24
+
+Today i learned:- 
+    Tensor for pytorch
+    Tensor is specialized multi-dimensional array designed for mathematical and computational efficiency.
+
+    Forward pass
+->A forward pass is when input data flows through a neural network layer by layer to produce an output (like a prediction), using weights, biases, and activation functions.
+
+Why are tensors useful?
+    1.Mathematical Operations
+    2.Representation of Real world Data
+    3. Efficient Computations
+
+Where are tensors used in deep learning
+1.Data storage 
+2.Weights and Baises
+3.Matrix Operations
+4.Training Process
+
+here 
+if torch.cuda.is_available():
+  print("Gpu available for lspp day 24")
+  print(f"gpu name:-{torch.cuda.get_device_name(0)}")
+else:
+  print("using cpu only")
+
+  here using torch.cuda we can use gpu for tensor 
+
+  method of torch
+
+  torch.empty(shape) -> here, empty method is used to create the tensor with given shape and it allocates memory accordingly
+
+  torch.manual_seed(seednumber)-> it used in times when we need to reproduce the same random value different. here, seednumber helps to generate same random values
+
+  torch.tensor([[],[]])-> This is used to make custom tensor.
+
+  torch.arrange()
+  torch.eye()-> identity matrix()
+
+  torch.empty_like(TensorName) => this generate same shape tensor as name given)
+
+  x.to(torch.dtype)-> this converts the data type from one to another .
+
+  torch.clamp(object,min,max)=> this is used to keep every thing in range
+
+
+  Reduction
+
+torch.sum() we have parameter dim 0 for col and dim1 for rows
+torch.mean() gives mean
+torch.median() gives median
+torch.min(),max()
+torch.prod()
+torch.std()-> gives standard deviation
+torch.var()-> gives the variance
+torch.argmin(),argmax()-> gives the index of minimum and max..
+tensor.matmul()
+tensor.dot()
+tensor.transpose(f,0,1)
+tensor.det()-> gives determinant
+torch.inverse()-> gives inverse matrix
+
+comparision are also allowed in between tensor(<,>,==,!=)
+
+Special function
+.log()
+exp()
+sqrt()
+sigmoid()->The sigmoid function is a math function that turns any number into a value between 0 and 1. It’s often used in neural networks to show probabilities.
+softmax()->The softmax function turns a list of numbers (called logits) into probabilities that all add up to 1. It makes bigger numbers into bigger probabilities, and smaller ones into smaller probabilities.
+relu()->ReLU is a function that gives 0 for negative numbers and keeps positive numbers the same. It's used in neural networks to help them learn. 
+
+inplace operator
+tensorName.operation_(scalar or tensor)
+ 
+ copying tensor
+ tensor.clone()
+
+tensor on gpu
+device=torch.device('cuda')
+
+there is drastically fast
+
+.unsqueeze() -> add new dimension
+.squeeze()-> remove dimension
+
+convert numpy array to pytorch tensor
+
+torch.from_numpy(objext)-> this converts numpy array to tesnor
+
+
+link to notebook ;- https://colab.research.google.com/drive/1b8gnt8oYEU3AyBJFygj3AH8zntHe06A8#scrollTo=93r9I-2Tcvcr
