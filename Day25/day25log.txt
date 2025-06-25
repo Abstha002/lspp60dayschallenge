@@ -1,0 +1,41 @@
+LSPP Day 25
+
+Today i learned :- 
+Autogard 
+Why is autogard important?
+    -> As the program becomes more and more nested  it will be difficult to calculate the derivates  of the functions.
+    Nested function and calculating derivates are kind of same. Neural networks is nested function it has huge amount of variable which is imcomplete to solve manual so to solve autograd important
+
+    Training Process of neural network
+    1.Forward pass-> compute the output of the network given an input.
+    2.Calculate loss-> calculate the loss function
+    3.Backward pass->compute gradients of the loss with respect to the parameters
+    4.Update gradients ->Adject the parameters using an optimization algorithm (gradient descent)
+
+        Forward pass computation
+            1. Linear transformantion(z=wx+b) b -> baises w-> weight  x-> input
+            2.Activation (sigmoid function)
+            3.Loss function(binary cross -entropy loss)
+
+            What is autograd?
+                -> Autograd is a core component of pytorch that provides automatic defferentiation for tensor opertions . It enables computation which is essential for training machine learnig models upsing optimization algorithsm like gradient descent.
+
+            autogard create the computation graph . Create the graph and remembers what the previous operation
+
+            method
+                .tensor(3.0,requires_grad=True)=> when creating the tensor if we put requires_grad = True , pytorch automatically understands the we are trying to do differentiation.
+                 .backward() -> this calculates the derivates
+                 .grad -> output the stored value.
+
+clearing gradient is very important as if there is pre existing gradient then it would mix up and then the value would just be summed together.
+this is done by inplace operator using like (x.grad.zero_()) if x gradient was the case.
+
+disable gradient tracking
+it is when all the calculation are done . it is unnecessary to keep requires_grad on . so we turn it off.
+1 .method . x.requires_grid(false)
+2. method -> newVarible=x.detach()
+3.mthod->with torch.no_grad():
+                        statement
+
+
+
