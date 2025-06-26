@@ -1,0 +1,39 @@
+LSPP Day 26
+
+Today i learned :-
+Training pipeline
+->in neural network there they prefer same scale data(Scaler used)
+->neural nets doesn't understand alphabets(Labelencoder())
+-> convert numpy array to tensor
+=> when defining the model we take OOP concept 
+        -> wrote the function needed 
+    
+    Steps followed by model was like
+
+        code snippets
+                                    #create model
+                            model=NeuralNets(X_train_tensor)
+                            #define loop
+                            for epoch in range(epochs):
+                            #forward pass
+                            y_pred=model.forward(X_train_tensor)
+                            #loss calculate
+                            loss=model.loss_function(y_pred,y_train_tensor)
+                            print(f"epoch:-{epoch+1} loss:-{loss.item()}")
+                            #backward pass
+                            loss.backward(). <= this requires here calculated derivatee 
+
+                            # parameters update
+                            with torch.no_grad():
+                                model.weights -= learning_rate * model.weights.grad
+                                model.bias -= learning_rate * model.bias.grad
+
+                            # zero gradients
+                            model.weights.grad.zero_()
+                            model.bias.grad.zero_()
+
+                            # print loss in each epoch
+                            print(f'Epoch: {epoch + 1}, Loss: {loss.item()}')
+
+                    
+
