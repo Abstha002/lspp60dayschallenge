@@ -1,0 +1,51 @@
+LSPP Day 27
+
+Today i learned:-
+NN module in python
+    The torch.nn module in PyTorch provides classes and functions to build neural networks. It includes pre-defined layers (like Linear, Conv2d), activation functions (ReLU, Sigmoid), loss functions (MSELoss, CrossEntropyLoss), and tools to structure models using nn.Module, the base class for all neural networks.
+
+why nn module
+    Simplifies Neural Network Design
+         Predefined layers, activations, and loss functions reduce boilerplate code.
+    Modular Structure
+        Use nn.Module to build reusable, organized model components.
+    Automatic Differentiation Support
+        Works seamlessly with PyTorch’s autograd to compute gradients.
+    Hardware Acceleration
+        Easily move models to GPU for faster training (model.to('cuda')).
+     Interoperability
+            Integrates well with optimizers (torch.optim), datasets, and dataloaders.
+     Customizability
+                Allows defining custom layers and networks by subclassing nn.Module.
+
+Key components of torch.nn
+1.Modules
+    nn.modules
+    common layer:nn.linear(fully connected layer) , nn.conv2d(convolutional layer)
+2.Activation functions
+    nn.relu(),nn.sigmoid(),nn.Tanh
+3.Loss functions
+    nn.CrossEntropyloss,nn.MSELogs,nn.NLILoss
+
+
+torchinfo library is used to visualize the model  
+    -> summary function is used
+
+
+when the time calculates start to look hectic we use sequiental container
+how to makes containers
+                        nn.sequential(
+                                descriptions
+                            )
+
+what is torch.optim
+    provies a variety of optimization algorithms used to update the parameters of your model during training.
+
+it handles weights updates very efficiently
+
+model.parameter()-> iterators hoo haii
+
+
+
+
+
