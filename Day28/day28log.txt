@@ -1,0 +1,68 @@
+LSPP Day 28 
+
+Today i learned
+    Dataset & Dataloader 
+    Dataset
+            A class that represents your data.
+            Can be built-in (like MNIST) or custom.
+            You subclass torch.utils.data.Dataset and define:
+            __init(): which tells how data should be loaded
+            __len__: returns the number of items(number of rows)
+            __getitem__: returns one item (like one image and label)
+
+DataLoader
+    Wraps a Dataset and helps you:
+    Load data in batches
+    Shuffle data(using sampler)
+    Use multiple workers (threads) to speed up loading
+    Used in training loops to feed data to the model.
+
+group is called as chucks
+
+Why it is need 
+1. Memory inefficient ( ram is very less)
+2.Better convergence
+
+
+how should dataset & dataloader works:-
+1.Data is stored in memory
+2.Dataset class has the capability to access the row from the memory directly.
+3.DataLoader class has the ablility create batch according to batch size it reqs dataset class dataset fetchs the memory 
+then dataloader receives and then send it for training
+
+__getitem__() -> here as the transformation are kept
+
+concept of parallel processing 
+    kasto hunxa bhanda  
+    dataset linxa
+    shuffles that dataset
+    creates multiple chucks 
+    after creates mulitple chuck each chuch is given to 1 thread(a worker) if two thread then two chucks are calculated and then combined then put into the pipeline 
+    (so good is your hardware matters here)
+    
+concept of sample   
+Types 
+    sequential sample ( used in time)(shuffle=false)
+    random sample(s=True)
+
+customerSample
+    while using imbalance class customerSample is used like in the ratio( eg:3;1)
+
+
+collate function
+    when getitem() return certain rows those rows are combine and create into the batch that batch is create by collate function 
+
+    the padding comes these when the size of the tensor are not equal it is to be padding the padding
+
+    Dataloader parameters
+        dataset(req)
+        batch_size
+        num_worker(thread)
+        pin_memory(related to gpu stuffs)
+        drop_last(suitations like batch is exceed certain are left then keep or not)
+        collate_fn
+        sampler_fn
+        
+
+
+
