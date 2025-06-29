@@ -1,0 +1,30 @@
+LSPP Day 29
+
+Today i learned :-
+What is ANN
+    ANN (Artificial Neural Network) is a type of machine learning model inspired by the human brain. 
+    It consists of layers of interconnected neurons (nodes) that process input data to learn patterns and make predictions.
+
+    Basic Structure:
+    Input Layer – takes in the features
+    Hidden Layers – process data using weights & activation functions
+    Output Layer – gives the final prediction
+
+create the simple ANN model and how do it works
+
+this will have input layer ( hidden layer *2(128N, 64N),reLU()), output layer(10N),(softMax)
+
+why softMax -> because it is multi class model
+
+workFlow 
+   -> Dataloader objects
+    ->Training loops
+   -> Evaluation
+
+
+CrossEntropyLoss
+CrossEntropyLoss is a loss function used for multi-class classification that measures the difference between the predicted class probabilities and the actual class label.
+
+Difference between binary and crossEntropy
+    BCE: "Is this email spam?" → 0 or 1
+    CE: "What digit is this?" → one of 10 classes (0–9)
