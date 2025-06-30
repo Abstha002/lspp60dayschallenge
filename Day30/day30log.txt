@@ -1,0 +1,108 @@
+LSPP Day 30
+
+
+Today i learned :- 
+
+What is Epoch:-
+One complete pass through the entire training dataset during training a model.
+Why multiple epochs?
+One pass isn’t enough to learn well.
+Multiple epochs help the model improve by learning from the data again and again.
+Training for 10 epochs means the model sees the entire dataset 10 times.
+
+why batch size effect accuracy?
+Small batch size
+        Noisier updates
+        May generalize better (higher test accuracy)
+        Slower training per epoch
+Large batch size
+        Smoother updates
+        Faster training per epoch
+        May overfit or get stuck in poor minima
+Best batch size depends on the data, model, and task—typically 32 to 128 works well.
+
+Why to Train on GPU?
+Faster Computation
+        GPUs have thousands of cores → massively parallel processing
+        Great for matrix operations (used in neural networks)
+Efficient for Deep Learning
+        Neural networks involve heavy linear algebra → GPUs are optimized for this
+Faster Training = More Experiments
+        You can test models, tune hyperparameters, and iterate faster
+Handles Larger Models & Batches
+        GPUs have more bandwidth and memory for big models or large datasets
+
+
+How to train on gpu steps
+1.Check Gpu availability
+        device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        print("Device is :_ ",device)
+2.Move the model into gpu
+        model = MyNN(X_train.shape[1]) => this is model and below it is loaded into gpu
+        model.to(device)
+3.Modify the training loop by moving data to gpu
+            batch_features, batch_labels=batch_features.to(device), batch_labels.to(device)=> load on gpu and reassigning them.
+4.Modify the Evaluation loop by moving data to gpu
+        same as No.4
+5.Optimize the Gpu usage
+        increase the batch_size
+6.enable Pin memory
+        train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True,pin_memory=True) #pin memory is used for gpu training hai the guys
+test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False,pin_memory=True)
+
+
+Optimizing the neural network 
+
+Whenever there is a big gap between training data and testing data accuracy it is clearly that overfitting is going on.
+overfitting
+Overfitting is when a model learns the training data too well, including noise or details that don’t generalize.
+It performs well on training data but poorly on new (unseen) data.
+
+Ways to optimize the neural network
+        1.Adding more data (give more data to train) 
+        2. Reducing the complexity of NN architecture
+        3.Regularization(add Penality to loss function (l1,l2 regularization))
+        4.Dropouts(Randomly turning off some neuron) 
+        5.Data augmentation(flip,rotate, tilt, -> different version of same data best of CNN)
+        6.Batch Normalization
+        7.Early stopping( when you see that score are not improving between period of epoch)
+
+
+specific to part that is learned
+        Dropout
+                Applied to the hidden layers
+                Applied after the Relu activation function
+                Randonly turns off p% neurons in the hidden layer during each forward pass
+                This has a regularization effecti
+                During evalution dropout is not used 
+        
+        Batch Norm
+                Applied to Hidden Layers
+                Applied After linear Layers and Before Activation Functions
+                Normalizes Activation
+                Includes Learnable Parameters
+                Improves training Stability
+                Regularization Effect
+
+        L2 Regularization
+        (Add penality term)
+        Applied to model weights
+        introduced via loss function 
+        Penalities large weights
+        Reduces overfitting
+        Controlled by a hyperparameter
+        NO effect on bias terms
+        Active during training
+
+All this optimization happens on only training phase.
+
+
+
+CNN (Convolutional Neural Network) is a type of deep learning model specially designed for processing images.
+ANN = good for general-purpose data.
+CNN = designed for images and spatial pattern recognition.
+
+Internal Covariate Shift
+        Internal Covariate Shift refers to the change in the distribution of inputs to a neural network layer during training, caused by updates in the previous layers.
+Neural network are optimization problem(finding out weight and bias to minize loss)
+
