@@ -1,0 +1,58 @@
+LSPP Day 31
+
+Today i learned:-
+
+ What is Optuna?
+    Optuna is an automatic hyperparameter optimization framework in Python.
+
+What it does:
+    Helps you find the best hyperparameters (like learning rate, batch size, etc.)
+    Uses smart algorithms (like TPE, Bayesian optimization) to explore parameter space efficiently.
+    Supports early stopping, parallel optimization, and visualizations.
+
+
+Bayesian Search
+    Bayesian Search is a smart method to optimize hyperparameters by building a probabilistic model of the objective function and using it to choose the most promising hyperparameters to try next.
+
+Key Idea:
+    Instead of randomly guessing, it learns from past trials to pick better future values.
+
+In Hyperparameter Tuning:
+    You define a search space (e.g., learning rate from 0.001 to 0.1)
+    Bayesian optimization predicts which values are likely to give good results.
+
+It balances:
+Exploration (trying new things)
+Exploitation (refining what works)
+
+Key Terms  in Optuna
+1.Study
+    (overall experiment for where we are trying to extract be hype parameter value)
+2.Trail
+
+3.Trial parameters
+4.Objective Function
+    (we send value of hypeparameter and in return we get accuracy value)
+5.sampler
+
+Optuna offers flexibility we can use Bayein search also or else Random Search only can be done
+
+Optuna offers another feature that is visualization.
+
+1.optimization history plot 
+    (trial no vs accuracy value)
+2.Parallel Corrdinate plot
+        (used in MLFlows)
+            helps you understand relationship between accuracy, max_depth , n_estimator
+3.slices plot
+   ( max_depth  or n_estimator vs objective value)
+4.contour plot
+    region identification for highest accuracry( more blue meaning more accuracy)
+5.Importances plot 
+    tell which hyperparameter are more important.
+
+Features Define by run:-
+    Help to create dynamic search space.
+    (dfferent model same hyperparameter tuning)
+
+Optuna has very great integration with sklearn,keras,pytorch,mlflow
