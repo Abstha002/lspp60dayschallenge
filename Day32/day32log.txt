@@ -1,58 +1,82 @@
-LSPP Day 31
+LSPP Day 32
 
 Today i learned:-
+What is CNN?
+CNN (Convolutional Neural Network) is a type of deep learning model designed for image and visual data processing.
 
- What is Optuna?
-    Optuna is an automatic hyperparameter optimization framework in Python.
+Key Points:
+Detects patterns like edges, shapes, textures in images.
+Uses convolutional layers instead of just dense (fully connected) layers.
+Great for image classification, object detection, and face recognition.
 
-What it does:
-    Helps you find the best hyperparameters (like learning rate, batch size, etc.)
-    Uses smart algorithms (like TPE, Bayesian optimization) to explore parameter space efficiently.
-    Supports early stopping, parallel optimization, and visualizations.
+CNN are nothing but a type of neural network .CNN dominates on Grid based data.
+
+Features Extraction is made up of two layers
+    Convolution layer
+        Applies filters (kernels) to the input image.
+        Detects basic features like edges, corners, textures, etc.
+        Output is a feature map showing where and how strong a pattern appears.
+
+Think of it like a scanner that slides over the image looking for patterns.
+
+2. Pooling Layer
+    Reduces the size of feature maps (downsampling).
+    Keeps the most important features, removes noise.
+    Most common: Max Pooling – takes the highest value in each region.
+
+ Think of it like zooming out or summarizing — keeps the essence, loses details.
+    
+
+After features extraction the Classification is done it is done by neural networks
+
+steps or architecture in images classifcation
+1.Pair or single convolution and pooling layer
+2.Tensor 
+3. Flatten(1D)
+4.ANN
+
+Code snippets
+        self.features = nn.Sequential(
+            nn.Conv2d(input_features, 32, kernel_size=3, padding='same'),
+            nn.ReLU(),
+            nn.BatchNorm2d(32),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+
+            nn.Conv2d(32, 64, kernel_size=3, padding='same'),
+            nn.ReLU(),
+            nn.BatchNorm2d(64),
+            nn.MaxPool2d(kernel_size=2, stride=2)
+        )
+        self.classifier = nn.Sequential(
+            nn.Flatten(),
+            nn.Linear(64*7*7, 128),
+            nn.ReLU(),
+            nn.Dropout(p=0.4),
+
+            nn.Linear(128, 64),
+            nn.ReLU(),
+            nn.Dropout(p=0.4),
+
+            nn.Linear(64, 10)
+        )
+
+kernel_size=3
+Size of the filter (window) used in convolution.
+3 means 3×3 filter scans over the image.
+
+padding='same'
+Adds pixels around the input so output size is the same as input size after convolution.
+
+BatchNorm2d(32)
+Normalizes the output of a convolution layer across the batch for faster, stable training.
+32 is the number of channels to normalize.
+
+MaxPool2d(kernel_size=2, stride=2)
+Reduces the size of feature maps by taking the maximum value in each 2×2 window, moving 2 steps at a time (stride).
+Used for downsampling.
+
+stride=2
+How many pixels the filter moves (jumps) at each step.
+2 means it skips 1 pixel each time.
 
 
-Bayesian Search
-    Bayesian Search is a smart method to optimize hyperparameters by building a probabilistic model of the objective function and using it to choose the most promising hyperparameters to try next.
-
-Key Idea:
-    Instead of randomly guessing, it learns from past trials to pick better future values.
-
-In Hyperparameter Tuning:
-    You define a search space (e.g., learning rate from 0.001 to 0.1)
-    Bayesian optimization predicts which values are likely to give good results.
-
-It balances:
-Exploration (trying new things)
-Exploitation (refining what works)
-
-Key Terms  in Optuna
-1.Study
-    (overall experiment for where we are trying to extract be hype parameter value)
-2.Trail
-
-3.Trial parameters
-4.Objective Function
-    (we send value of hypeparameter and in return we get accuracy value)
-5.sampler
-
-Optuna offers flexibility we can use Bayein search also or else Random Search only can be done
-
-Optuna offers another feature that is visualization.
-
-1.optimization history plot 
-    (trial no vs accuracy value)
-2.Parallel Corrdinate plot
-        (used in MLFlows)
-            helps you understand relationship between accuracy, max_depth , n_estimator
-3.slices plot
-   ( max_depth  or n_estimator vs objective value)
-4.contour plot
-    region identification for highest accuracry( more blue meaning more accuracy)
-5.Importances plot 
-    tell which hyperparameter are more important.
-
-Features Define by run:-
-    Help to create dynamic search space.
-    (dfferent model same hyperparameter tuning)
-
-Optuna has very great integration with sklearn,keras,pytorch,mlflow
