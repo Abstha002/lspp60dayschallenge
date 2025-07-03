@@ -1,0 +1,80 @@
+LSPP Day 33
+
+Today i learned
+what is using pre trained model?
+
+A model which is train in already in another data
+
+what is Transfer Learning?
+
+Transfer learning is a  machine learning technique where a model trained on one task is reused for a different but related task.Instead of training a model from scratch, which can be computationally expensive and require large datasets , transfer learing leverage knowledge from a pre- trained model to imporove learining efficeincey and performance.
+
+uses pre trained model
+
+How transfer learning works?
+1.Pretraining on a large dataset.
+2.Fine tuning for an New task.
+
+It works like convolution and pooling layer works are pre trained and the parameter are freeze( there will be no changes in the value ) and the model last layer will only be trained in the small dataset.
+
+Eg( Pre trained model part is trained on the basic features like edges and shapes, so adding our different dataset help model to predict wheather it is a shirt or pant)
+
+
+
+
+Flaws of Deep learning
+
+1.Deep learning model are data hunger
+2.Training deep learning model is costly
+
+Steps that i took 
+    1. Import 
+    2.detach classifier
+    3.attach classifier (custom that we build)
+    4.freeze fe(feature extraction) layer
+    5.Train
+
+What is Convolution (in CNN)?
+Convolution is a mathematical operation where a small filter (kernel) slides over an input (like an image) and computes weighted sums to extract features.
+
+In simple terms:
+Convolution means scanning a small window (e.g., 3×3) over the image to detect patterns like edges, lines, or textures.
+
+Example (for image):
+You slide a 3×3 filter over the image.
+At each step, multiply the filter with the image patch, sum the values.
+The result forms a feature map.
+
+In CNNs:
+Helps the model learn spatial patterns in data.
+Each convolutional layer extracts higher-level features.
+
+what is vgg16?
+    VGG16 is a pre-trained convolutional neural network (CNN) architecture developed by the Visual Geometry Group at Oxford.
+
+Key Facts:
+    16 layers deep (13 convolutional + 3 fully connected layers).
+    Trained on ImageNet dataset — 1.4 million images, 1,000 classes.
+    Input images are PIL images resized to 224×224.
+    Commonly used for image classification, feature extraction, and transfer learning.
+
+What is torchvision?
+    Torchvision is a PyTorch library that provides tools for computer vision tasks.
+
+Key Features:
+    Pre-trained Models
+    CNNs like ResNet, VGG, MobileNet, etc.
+    Trained on ImageNet
+
+Datasets
+    Easy access to datasets like MNIST, CIFAR-10, ImageNet
+    With automatic download & loading
+
+Transforms
+    Tools to resize, crop, normalize, flip, rotate images, etc.
+    Useful for data preprocessing & augmentation
+
+Utilities
+    Functions to visualize images, convert between formats (e.g., PIL ↔ Tensor)
+
+
