@@ -1,0 +1,46 @@
+LSPP Day 34
+
+Today i learned:-
+
+What is RNN?
+Recurrent Neural Network
+RNN is a type of neural network designed to handle sequential data by remembering past information.
+
+Key Features:
+    Has a memory of previous inputs.
+    Great for time series, text, speech, and other sequential data.
+    Processes input one step at a time, keeping context.
+
+Common Use Cases:
+    Language modeling
+    Text generation
+    Sentiment analysis
+    Stock price prediction
+
+RNN is type of neural network desinged for processing sequential data. Unlike traditional feeedforward networks. which process inputs independently. RNN maintain a memory of previous inputs by using loops in their architecture. 
+The makes them well suited for task where context and order matter, such as time series forecasting speech recongnition and text generation. 
+
+How does it works? 
+It all works on the basis of timestep like every step thing happen like first timestep it take 1 input converts into in number and then another step another another input include with the previous output.
+eg
+How RNN Works (Simplified):
+Sequence Input
+Input comes in a sequence, like a sentence:
+["I", "love", "AI"]
+
+Timestep 1
+Take the first word → convert to number/vector (embedding)
+Feed it into the RNN
+
+RNN gives an output and a hidden state (memory)
+→ This hidden state carries info to the next step
+
+Timestep 2
+Take the second word
+Combine it with the previous hidden state
+Output + new hidden state generated
+
+Timestep 3
+
+Repeat the same: input + memory = output + updated memory
+
