@@ -1,0 +1,33 @@
+LSPP Day 35
+
+Today i Learned:-
+
+What is languages modelling?
+Language modeling is the task of building a model that can predict the next word (or token) in a sequence, based on the previous ones.
+
+Goal:
+Learn the probability distribution of sequences of words.
+
+For example:
+    Input: "I love"
+    Output: "you" (most likely word to follow)
+
+What is LSTM?
+    LSTM is a special type of Recurrent Neural Network (RNN) designed to remember information for longer periods and solve the vanishing gradient problem.
+
+Why LSTM?
+    Standard RNNs struggle to remember long-term dependencies.
+    LSTM solves this by using a memory cell and gates to control the flow of information.
+
+Key Components:
+    Forget Gate – decides what to remove from memory
+    Input Gate – decides what new info to store
+    Output Gate – decides what to output from the memory
+
+What is NLTK?
+    NLTK (Natural Language Toolkit) is a Python library used for working with human language data. It helps you easily perform tasks like breaking text into words or sentences (tokenization), removing common words (stopwords), and analyzing grammar or meaning. It's great for learning and building simple natural language processing (NLP) applications.
+
+
+
+
+
