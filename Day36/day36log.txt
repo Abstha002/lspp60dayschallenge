@@ -1,0 +1,120 @@
+LSPP Day 36
+
+Today i Learned:-
+
+ what is cloud computing?
+    Cloud computing means using the internet to access computers, storage, and services instead of 
+    buying and maintaining your own. So instead of buying a big server, you rent it from companies like AWS
+     (Amazon Web Services). You can store files, run websites, or use databases — all online — and only pay for what you use, 
+     like electricity.
+
+What is Amazon Web Servies?
+    Amazon Web Services (AWS) is a platform by Amazon that lets you use powerful tools like servers, storage, databases,
+     and more — all through the internet. Instead of buying expensive hardware, you can rent what you need from AWS and 
+     only pay for what you use. It helps people and companies build websites, apps, store files, or run software without needin
+     g their own computers or data centers.
+
+Global infrastructure of AWS.
+    The global infrastructure of AWS includes Regions, Availability Zones (AZs), and Edge Locations.
+    Regions are places around the world (like Mumbai or Tokyo) where AWS has data centers.
+    Each Region has AZs, which are separate data centers that keep your apps running even if one fails.
+    Edge Locations are used to deliver content faster to users, like for websites or videos.
+
+
+Networking on AWS
+        Networking on AWS is how different resources (like servers, databases) talk to each other securely inside the cloud.
+
+    Key Parts (in simple terms):
+        VPC (Virtual Private Cloud): Your own private network in AWS where you place servers, databases, etc.
+        Subnets: Smaller sections inside a VPC (public or private).
+        Security Groups: Act like firewalls — control what traffic is allowed in or out.
+        Route Tables: Decide how data moves inside your VPC.
+        Internet Gateway: Lets your VPC connect to the internet.
+        NAT Gateway: Lets private servers access the internet without being exposed.
+
+Compute in the Cloud 
+    Compute in the cloud means using virtual computers (instead of physical ones) to run applications, websites, or code.
+
+    Main AWS Compute Services:
+        EC2 (Elastic Compute Cloud): Rent virtual machines (like a remote computer).
+        Lambda: Run your code without managing any server — just upload code and it runs.
+        Elastic Beanstalk: Easily deploy apps — AWS handles the setup.
+        ECS / EKS: Run and manage containers (like Docker).
+
+
+Account Security in AWS?
+    Account security in AWS means protecting your AWS account from unauthorized access and misuse. It focuses on who can log in and what they can do.
+
+ Key Account Security Practices:
+    Use a Strong Root Account Password
+    – The root user has full control. Use a strong, unique password.
+    Enable MFA (Multi-Factor Authentication)
+    – Adds a second step (like a phone code) to log in. Protects against stolen passwords.
+    Create IAM Users (don’t use root for daily tasks)
+    – Give individual users their own login and permissions.
+    Use IAM Roles and Policies
+    – Grant only the minimum permissions needed (called least privilege).
+    Monitor with CloudTrail
+    – Tracks account activity (who did what, when).
+    Set up Billing Alerts
+    – Get notified if your account spends more than expected (helps detect hacking).
+
+Storage and Database in AWS
+Storage in AWS
+    S3 (Simple Storage Service):
+        Store any kind of files like photos, videos, backups. It’s super scalable and durable.
+    EBS (Elastic Block Store):
+        Like a hard drive you attach to a virtual server (EC2). Used for fast, block-level storage.
+    Glacier:
+        Very cheap storage for files you don’t need to access often — good for backups or archives.
+
+ Databases in AWS
+    RDS (Relational Database Service):
+        Managed databases like MySQL, PostgreSQL, SQL Server — AWS handles backups and maintenance.
+    DynamoDB:
+        A fast, fully managed NoSQL database for apps needing quick, scalable access.
+    Aurora:
+        AWS’s own high-performance relational database compatible with MySQL and PostgreSQL.
+
+Monitoring and Analysis
+    Monitoring in AWS:
+        AWS helps you keep an eye on your resources (like servers, databases, apps) to make sure everything is running smoothly.
+
+        CloudWatch:
+        Tracks performance metrics (CPU, memory, disk usage), logs, and can send alerts if something goes wrong.
+
+        CloudTrail:
+        Records all the actions people and services do in your AWS account for security and auditing.
+
+    Analysis in AWS:
+    You can analyze logs and data to understand usage, troubleshoot issues, or improve your system.
+
+        AWS Config:
+        Keeps track of changes to your AWS resources and checks if they follow rules you set.
+
+        AWS Trusted Advisor:
+        Gives recommendations to optimize security, cost, performance, and fault tolerance.
+
+Support and Pricing in AWS
+Pricing in AWS
+Pay-as-you-go:
+You only pay for what you use — like electricity or phone bills.
+
+Free Tier:
+Many AWS services offer free usage limits for 12 months to help you get started.
+Pricing Calculator:
+A tool to estimate your monthly costs before using services.
+Cost Optimization:
+AWS suggests ways to save money, like reserved instances or right-sizing resources.
+
+Support Plans in AWS
+Basic (Free):
+Access to documentation, forums, and billing support.
+Developer:
+Email support during business hours for one primary contact.
+Business:
+24/7 phone, chat, and email support with faster response times.
+Enterprise:
+Full support including a Technical Account Manager and proactive guidance.
+
+
