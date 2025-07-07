@@ -1,0 +1,46 @@
+LSPP Day 37
+
+Today i Learned:-
+
+    What is Cloud computing?
+    Computing as utility
+    ->Pay as you use
+        points
+            =>Access Services on demand
+                You want networking you get networking on demand.
+           => Avoid large upfront investments
+            =>Provision computing resources as needed
+            =>Pay only for what you use
+        
+        Instead of buying , owning and maintaining physical data centers and servers , you can access technology serives, such as computing power, storage  and databases on an as=needed basis from a cloud provider like Amazon Web Services(AWS).
+
+        What are cloud computing service models?
+            1.SaaS(software as a service)
+                    Eg:- Facebook , gmail
+            2.Paas(platfrom as a service)
+                    Think like if i want to deploy dot,net app then dot.net framework much be present there.
+
+             3.Iaas(Infrastructure as a service)
+                what you want(storage, cpu and others)
+
+    What are deployment model?
+       => Public cloud 
+            when all public can use the cloud such kind of deployment model is public cloud(AWS,Azure,Google cloud)
+       => Private cloud 
+            cloud specifically made for us.
+        => Hybrid Cloud    
+                Mix of public and private
+
+        Advantage of using cloud computing
+            =>Avoid upfront expense
+            =>Advantage of Variable expense
+            =>Avoid running your own data centers
+            =>Focus on your application and customer
+            => Avoid focus on guessing infrastructure needs
+            =>Rather scale out or scale in when needed
+            =>Wanting and having resource may take weeks 
+            => Minutes between wanting resources and having rescources
+            =>Fast deployment of application / infrastructure world wide 
+            => Take advantage of AWS Global infrastructure
+            f
+
