@@ -1,0 +1,38 @@
+LSPP Day 38 
+
+Today i learned:-
+
+What is MLOps?
+MLOps refers to the practice and discipline within machine learning that aims to unify and streamline the machine learning system development(Dev) and machine learning system operation (Ops).It involves collaboration between data scientists, ML engineers, and IT Professionals to automate and optimize the end to end lifecycle of machine learning applications.o
+
+Component of MLOps:-
+1.Data Management
+    =>Data Warehouse and all the other data collection sources
+
+2.Version control
+    => Reflect on the all other changes bases
+
+3.Automation (pipeline)
+    => Create ML model and evaluation.create ML pipeline
+
+4.Expreiment Tracking
+    => Track all the experiment . To find out the best parameter . To reproduce the exact things that gave the best result.
+
+5.CI/CD
+    => Implement ML model into the website to find out if the code is working or not  and integration is done and it would be deployment in production
+
+6.Monitoring/Retraining
+    => Drifting checking and monitoring all the time. if the fault are degradation are found it should be retrained.
+
+7.Provisioning
+    =>  Making everything work together , cost , time , resources.
+
+8.Governance
+    => Follows all the Legal constrains
+
+Machine Learning System (ML System)
+    A machine learning system is a type of system that learns patterns from data to make predictions or decisions without being explicitly programmed for each task. It involves training a model using input data and expected outputs (labels), allowing the system to learn how to generalize to new, unseen data. ML systems are typically non-deterministic, meaning their behavior may vary depending on the training data or model parameters. Development focuses heavily on data collection, preprocessing, model training, and evaluation, rather than hand-coded logic. These systems are powerful for tasks like image recognition, speech processing, and language translation, where writing explicit rules would be impractical or impossible.
+
+Software System
+    A traditional software system is built using explicit programming instructions written by developers. These systems are rule-based and deterministic, meaning the same input will always produce the same output if the code doesn’t change. Software systems follow a clear structure of logic and control flow, making them easier to debug, test, and explain. Developers write code that specifies exactly how the system should behave under different conditions. Examples include banking systems, inventory management tools, and e-commerce platforms — where behavior must be reliable, repeatable, and well-defined.
+
