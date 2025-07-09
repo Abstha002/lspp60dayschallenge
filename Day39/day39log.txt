@@ -1,0 +1,83 @@
+LSPP Day 39
+
+Today i learned:-
+
+What is Generative AI?
+Generative AI is a type of artificial intelligence that can create new content —
+ such as text, images, music, video, or code — by learning patterns from existing data.
+
+Key Points:
+It generates rather than just analyzes or classifies.
+Trained on large datasets to learn how to produce realistic outputs.
+Powered by models like GPT (text), DALL·E (images), Stable Diffusion, and MusicGen.
+
+
+What is RAG (Retrieval-Augmented Generation)?
+RAG stands for Retrieval-Augmented Generation, a technique that combines retrieval (search)
+ with text generation (LLMs) to produce more accurate and up-to-date responses.
+
+How It Works (Simplified):
+Retrieve:
+Search a knowledge base (e.g., documents, database, or PDFs) using your query.
+
+Augment:
+Take the retrieved documents and feed them into a language model (like GPT) as extra context.
+
+Generate:
+The language model uses both your query + retrieved info to generate a more accurate,
+ relevant response.
+
+Is GenAi and RAG same?
+No, Generative AI and RAG (Retrieval-Augmented Generation) are not the same — 
+but they are closely related.
+
+Generative AI refers to artificial intelligence models, like GPT or DALL·E,
+ that are capable of generating new content such as text, images, code, or music based 
+ on patterns learned from large datasets. These models rely on pre-trained knowledge and can 
+ produce human-like outputs, but they may sometimes generate inaccurate or outdated information.
+  On the other hand, RAG (Retrieval-Augmented Generation) is a specific technique used to improve 
+  the accuracy and reliability of generative AI by combining it with a retrieval system. In RAG,
+  the AI first searches a relevant knowledge base or documents to find useful context, then uses
+   that information as input to the generative model. This allows the system to generate responses grounded in real, up-to-date data.
+    While generative AI works on its own learned knowledge, RAG enhances it by integrating external information dynamically during generation.
+    In summary, RAG is not a separate type of AI but a powerful method that makes generative AI smarter and more factually accurate.
+
+ Is Generative AI supervised or unsupervised?
+✅ Generative AI can be both, but most large models like GPT are trained using a self-supervised learning approach.
+
+Self-supervised means: the model learns from raw data without human-labeled answers.
+
+Example: Given the sentence "I love ___ learning", the model learns to predict the missing word.
+
+It uses the structure of language itself as labels, so it's not "fully unsupervised", but not manually labeled either.
+
+Is RAG (Retrieval-Augmented Generation) supervised or unsupervised?
+RAG is not a learning method — it's a technique or architecture.
+
+It combines:
+
+A retriever (often trained or fine-tuned with supervision or self-supervision)
+
+A generator (usually self-supervised like GPT)
+
+The overall RAG system is not trained in a fully supervised way unless you're fine-tuning it with labeled data for a
+ specific task (like Q&A).
+what is langchain?
+Langchain is an open source framework that helps in building (LLM based applications .
+ It provides modular components and end -to - end tools that help developer build complex AI application such as chatbots ,
+  question -answering systems. retrieval augmented generation (RAG) , autonomous agents, and more. 
+
+1. Suports all the major LLMs
+2. Simplifies developing LLM based applications
+3.Integrations available for all major tools
+4.Open source /free / actively developed
+5. Supports all major GenAi use cases
+
+LangChain can be used for both Generative AI and RAG
+
+What can you build?
+Conversational Chabots(most popular)
+Al Knowledge Assistants
+Ai agents
+Workflow automation
+Summarization /Research helpers
