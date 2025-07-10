@@ -1,0 +1,70 @@
+LSPP Day 40
+
+Today i learned:-
+
+Langchain components
+    1.Models
+    2.Prompts
+    3.Chains
+    4.Memory
+    5.Indexed
+    6.Agents
+
+=>Models 
+    In langchain "models' are the core interfaces through which you interact with Ai models. 
+    Give you standarized way to talk with all the different company api such as 
+    claude, gemini, open ai
+
+    in langchain there are two types of model 
+       1. language model
+            input text -> output text (LLMs)
+        2.Embedding model
+            Text input -> vector as output (semantic search)
+            
+What is Semantic Search?
+    Semantic search is a search technique that understands the meaning or context behind your query — not just the exact words.
+
+ How It Works:
+            Instead of matching keywords (like traditional search), it:
+            Converts the query and documents into embeddings (vectors)
+            Measures semantic similarity (how close the meanings are)
+            Returns results that are contextually relevant, even if the exact words don’t match
+
+=>Prompts
+    1.Dynamic
+    2.Role based prompts
+    3.Few shot prompting
+     
+=>Chains
+    Chains is the component of langchain that is just to build pipelines . 
+
+    pipelines
+            A pipeline is a step-by-step process where data flows through multiple stages, with each stage performing a specific task.while going to different stage you don't have to feed it output.
+
+            types
+                -> parallel chains(parallel processing)
+        
+                ->Conditional chains(conditional eg :- if feedback good just reply thank you but if reply bad create the experience question)
+
+=>indexes
+    indexes connected your application to external knowledge -such as PDFs websites or databases.
+    4 things
+        Document loader
+        Text splitter
+        Vector store
+        Retriever
+
+=>Memory
+        LLMs API calls are stateless
+                Memory available in langchain
+                    ConversationalBufferMemory
+                    ConversationBufferWindowMemory
+                    Summarizer Based Memory
+                    Custom Memory
+    =>Agents
+        Ai agents = chatbot with super power
+            has 
+                _Reasoning capablities
+                _Acces to tool
+                
+    
