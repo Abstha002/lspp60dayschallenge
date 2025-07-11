@@ -1,0 +1,50 @@
+LSPP Day 41
+
+Today i learned:_
+
+what are models?
+The model componenet in langchain is a crucial part of the framework, designed to faciliate interactions
+ with various languages models and embedding models. 
+
+it abstract the complexity of workign directly with different LLMs chat models and embedding models, providiing
+ a uniform interface to communicate with them. This makes it easier to build application that rely on AI generated test,
+  text embedding for similiarity search, and retirival augmented generation
+
+Languages Models are AI systems designed to process generate and understand natural languages text 
+
+Type so languages model
+    1.LLMs(Generate purpose,no memory ) inherits from baseLLM
+    2.Chat Models
+        chat model is used to conversational chat.(chat messages a input and chat messages as output, has memory)
+         inherits from BaseChatModel
+
+    
+    Open Source Models
+        open source languages models are freely available Ai models that canb e downloaded modififed ,fine-tuned and
+         deployed without restriction sfrom a central provider , unlike cloased source models such as OpenAi gpt-4 ,
+          anthropic claude or google gemini open source models allow full control and customization
+
+    HuggingFace:-
+        hugging face is the large repository of open source Ai models
+
+    Ways to use Open source model
+        -> using HF inference api
+        -> running locally
+    
+    Disadvantages
+        High hardware Requirements
+        Setup complexity
+        lack of RLHF( less fine tuning)
+        Limited multimodel abiliities (text, images ...)
+
+    Steps involved in open source 
+        -> Get on API Key or download locally
+        -> then import chathuggingface, huggingfaceEndpoint 
+        -> create object of huggind face endpoint object
+            then create  set the 
+                repo_id and others parameter(task..)
+        -> invoke the model with prompt
+        -> get result
+
+
+
