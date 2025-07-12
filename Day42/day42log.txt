@@ -1,0 +1,60 @@
+LSPP Day 42
+
+Today i Learned:-
+
+what are prompts
+
+prompts are the input instructions or queires given to model to guide its output.
+
+Here are two types of prompts 
+    -> Text based
+    -> mulit model prompt (images , text ..)
+
+
+Static prompts
+    The prompts is only the things that ai gets 
+Dynamic prompts
+    defining parameters leaving placeholder for user to input in the chat.
+    eg( paper input=> what style( math, code,) , length(short long medium)
+
+
+Prompts Template 
+    a prompt template in langchain is a structured way to create a prompts dynamically by inserting 
+    varialbes into a predefined templates. instead of hardcoding prompts . Prompt Template allows you to define
+     placeholder that can be filled in at runtime with different inputs 
+
+This makes is reusable , flexible, and easy to manage, especially when working with dynamic user inputs or
+ automated workflows 
+why use prompt templates
+1. Deflaut validation
+2. Reusable 
+3. Langchain Ecoysystem
+
+
+points 
+    => while using chatmodel , chat history needs to be send to and ai.
+
+Langchain built in Messages(langchain_core.messages)
+    Three types of message
+        ->system message
+                (system info , format Eg( you are the super doctor)
+        ->Human message
+        ->Ai message
+    
+    Chat prompt templates
+        In LangChain, a ChatPromptTemplate is used to define structured prompts for chat-based LLMs (like GPT-3.5/4). It supports roles like "system", "user", and "assistant" to better simulate a chat environment.
+
+        prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are a helpful assistant."),
+    ("user", "Tell me a joke about {topic}.")
+])
+
+
+    Message placeholder 
+        In LangChain, a message placeholder is used when you want to dynamically insert a list of messages (not just text) into a ChatPromptTemplate. This is especially useful in chat history or multi-turn conversations.
+        
+prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are a helpful assistant."),
+    MessagesPlaceholder(variable_name="chat_history"),
+    ("human", "{input}")
+])
