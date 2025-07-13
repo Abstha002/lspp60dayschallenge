@@ -1,0 +1,52 @@
+LSPP Day 43
+
+Today i learned:-
+
+What is MCP Server?
+
+Features
+    Search internet
+    Edit code files
+
+MCP (Model context protocol) is the standard ,protocol 
+    Model => AI model => Text, Images, Video ( GPT, Gemini, claude)
+    Context=> Most important = what is the context
+            What to give context
+                => Tools ( function)
+                => Resources: mostly attachments (csv files)
+                => Sampling Way to query other model 
+                => Prompts : Templates for clients 
+    Protocol: Sets of rules - standards
+            => reflection requestion ( how to talk with the server)
+
+Steps by steps procedure
+
+    Client (stateful)
+        server sent events <=> application(mongodb)
+        Message endpoint
+
+
+what is Vector database?
+Vector database aka Vector store.
+A vector database is a specialized type of database designed to store, index, and search high-dimensional vector representations (embeddings) of data — commonly used in AI, machine learning, and semantic search.
+
+What Are Vectors in This Context?
+In AI and NLP, data like text, images, or audio is converted into vector embeddings — numerical representations in multi-dimensional space. For example:
+
+A sentence like “I love Nepal” becomes a 768-dimensional vector: [0.12, -0.03, ..., 0.44].
+
+These vectors can then be compared for similarity using metrics like cosine similarity or Euclidean distance.
+
+ What Is a Vector Database?
+A vector database stores these embeddings and lets you:
+
+Insert: Upload vectors with optional metadata (like original text, IDs, etc.)
+Search: Find the most similar vectors using approximate nearest neighbor (ANN) search
+Update/Delete: Modify or remove stored vectors
+
+Pg vector, pine cone, chroma
+
+Flow 
+    Take Question and convert to embedding
+    find most relative embedding in db
+    Question + relative chunk -> chatgpt
