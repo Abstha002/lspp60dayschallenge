@@ -3,6 +3,43 @@ LSPP Day 43
 Today i learned:-
 
 What is MCP Server?
+    An MCP server, when developed by Claude AI/Anthropic, refers to a component implementing the
+    Model Context Protocol (MCP) — an open, standard way for AI assistants like Claude or Claude Code to 
+    connect to external tools, data sources, or environments 
+
+What is an MCP Server?
+    Server Role
+
+    Acts as a bridge exposing tools, files, APIs, or resources to an AI model.
+
+    For example, a "filesystem" MCP server lets Claude read/write files; a "weather" server might fetch forecasts 
+
+How It Works
+
+    The AI client (e.g. Claude Desktop, Claude Code) calls serve to launch an MCP server process.
+
+    That process implements the MCP specification (JSON-RPC 2.0), offering endpoints for actions like tool use, data retrieval, 
+    or prompting 
+
+
+Capabilities
+
+    Servers can expose three categories: Resources (e.g. files, database records), Tools (functions like get-forecast), and Prompts (predefined templates) 
+
+Typical Use Cases for a Claude‑AI MCP Server
+        Local file manipulation
+        via Filesystem MCP Server — Claude can list directories, open/edit files, automate coding tasks 
+
+
+        Domain-specific integrations
+        e.g. weather data, GitHub, Slack, Notion — adding real-time capabilities into conversation, code review, automation 
+
+
+        Custom tool development
+        Developers can build servers that let Claude interact with internal tools or proprietary 
+        APIs using any supported SDK (Python, TypeScript, Java, Rust, etc.) 
+
+
 
 Features
     Search internet
