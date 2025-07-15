@@ -1,0 +1,58 @@
+LSPP Day 44
+
+Today i learned:-
+
+In Langchain structured output refers tot he practice of having language models 
+return responses in a well - defined data format (for example , JSON), rather than
+ free -form text. This makes the model output easier to parse and work with programmatically. 
+
+[Prompt]= can you create one day travel itinerary for paris?
+Free it returns a text it is unstructured output
+
+structured:-JSON enforced output 
+
+Why do we need structured output?
+    Data Extraction
+    API building 
+    Agents
+
+Agents needs structured output
+
+ LLMs
+    that can 
+        => with_structured output
+    that can't 
+        => output parser
+    
+    Before invoke
+            state with_structured_output
+                and data format
+            
+        
+
+specifying data format with 
+    Typed Dict
+        Typed Dict is a way to define a dcitionary in python where you specific what keys and values should exist, it helps ensure that your dictionary follows a specific structure.
+
+        why use typed Dict?
+            -> It telss python what keys are required and waht types of values they should have. 
+            -> it does not validate data at runtime( it helps with type hints for better coding) 
+
+        Pydantic 
+            pydantic is a data validation and data parsing library for python. It ensures that the data you work with is correct, structured , and type -safe
+
+    Json
+
+    When to used what
+        use typedDict if :
+             need type hints
+             don't need validation
+            trust the LLM
+        use Pydantic if:
+            data validation
+            default values
+            automatic type conversion
+        JSON  Schema
+            don't want python library
+            validation but don't need python objects
+                standard json format
