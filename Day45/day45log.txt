@@ -1,0 +1,64 @@
+LSPP Day 45
+
+Today I learned:-
+
+StrOutputParser
+ => Most simplest output parser
+        it is used to parse the ouput of a lnaguage model and return it as a plain string
+
+What is StrOutputParser in LangChain?
+    StrOutputParser is a utility in LangChain that parses the output from a language model (LLM) and
+     returns it as a plain string.
+
+Why use it?
+    When an LLM (like GPT) gives you a response, it often comes in a complex format (like a ChatMessage object). 
+    StrOutputParser helps by extracting just the text so you can work with it more easily.
+
+What is JsonOutputParser in LangChain?
+    JsonOutputParser is a tool in LangChain that takes the output from a language model (LLM) and parses it into a
+     Python dictionary (from JSON format).
+
+Why Use It?
+    Language models often output structured data as JSON, especially when you ask them to.
+    But the raw output is a string — not usable as a dictionary unless you parse it.
+
+    That’s where JsonOutputParser helps: it automatically converts the LLM’s JSON-formatted text into Python dict or list.
+
+ What is StructuredOutputParser in LangChain?
+    StructuredOutputParser is a LangChain utility that helps you get well-structured, strongly typed outputs 
+    (like dicts with specific fields) from a language model, based on a defined schema.
+
+Why use it?
+Sometimes you want the LLM to return data in a strict format — like:
+
+                                        json
+
+                                        {
+                                        "name": "Alex",
+                                        "age": 25
+                                        }
+
+Instead of trusting the model to do it correctly, StructuredOutputParser:
+Defines the required format using a schema
+Parses and validates the LLM output
+Ensures you always get structured, reliable data
+
+What is a Pydantic Output Parser?
+    A Pydantic Output Parser is a tool (often used in frameworks like LangChain) that helps you parse 
+    the output of a language model (LLM) into a well-defined Python data model using Pydantic.
+
+    Pydantic is a Python library used for data validation and settings management using Python type annotations.
+
+    By defining a Pydantic model (class), you can ensure the LLM's output fits a structured schema 
+    (like specific fields, types).
+
+    The parser will take raw LLM text output and try to convert it into that Pydantic model, raising errors or
+     validation issues if it doesn't match.
+
+Why use Pydantic Output Parser?
+    Structured output: When you want your LLM output to follow a strict format, like JSON with specific fields.
+
+    Validation: Automatically check that output meets expected types (e.g., int, str, list).
+
+    Easier downstream use: Once parsed, the data can be used as native Python objects with type safety.
+
