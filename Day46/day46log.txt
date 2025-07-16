@@ -1,0 +1,47 @@
+LSPP Day 46 
+
+Today i learned :-
+
+Fundamentals of Chain in langchain
+
+    Fundamentals of Chain in LangChain
+    Chains in LangChain allow you to build pipelines of operations where the output of one step becomes the input to the next. This modular approach is useful when you want to combine multiple components—like prompt templates, models, and output parsers—into a single cohesive workflow.
+
+    A chain connects different steps in a process to automate the transformation of input into the desired output.Chain lets to make Pipeline . Main concepts connects input and output .
+
+
+Pipe operator is used to connect chains together
+LangChain Expression Language (LCEL)
+LangChain provides a special syntax to connect components using the pipe (|) operator. This is similar to Unix pipes or functional composition, and it allows you to express the flow of data through various components in a clear and readable way.
+
+Types of Chains
+LangChain supports various types of chains depending on the logic and flow of tasks:
+
+1. Sequential Chain
+    Executes components one after another in a linear fashion.
+
+    The output of one component becomes the input for the next.
+
+    Useful for step-by-step processing.
+
+    Example use-case:
+    First generate a summary → then translate it to another language.
+
+2. Parallel Chain
+    Executes multiple chains simultaneously or in parallel, and collects their outputs together.
+
+    Often used to get different types of outputs from the same input.
+
+    Example use-case:
+    One model extracts sentiment while another summarizes the text.
+
+3. Conditional Chain
+    Routes the input through different chains based on conditions.
+
+    Useful for decision-making logic or branching workflows.
+
+    Example use-case:
+    If user input mentions "weather", use weather chain. If it mentions "news", use news chain.
+
+
+
