@@ -1,0 +1,63 @@
+LSPP Day 47
+
+Today i Learned:-
+
+Runnable in langchain
+what is runnable?
+A runnable in LangChain is any component that can be run or executed
+ as part of a chain or pipeline. It takes an input, processes it (like formatting a prompt, 
+ generating a response using a model, or parsing output), and returns an output.
+  All core elements in LangChain—such as prompt templates, models, and parsers—are 
+  considered "runnables," which means they can be connected together using the | pipe operator
+   to build workflows. This makes it easy to build flexible and reusable AI pipelines where each
+    step knows how to handle its part. 
+
+Types of runnable 
+Task Specific Runnable
+    these are core langchain compoenets that have been converted into runnables so they 
+     can be used in pipelines
+    Purpose :performs task specific operations like LLM calls, prompting , retrieval, etc
+    Examples
+        ChatOpenAi- runs an llm model.
+        PromptTemplate-formats prompts dynamically
+        Retriever-Retreive relevant documents
+
+
+
+Runnable Primitives
+    These are fundamental buildling blocks for structing execution  in ai work flow
+    purpouse: they help orchestrate execution by defining how differen
+      (sequentially in parallel, conditionally, etc)
+    Example
+        RunnableSequence-> runs steps in order (| operator)
+        RunnableParallel-> runs multiple steps simultaneously
+        RunnableMap- maps the same input across multiple functions
+        Runnablebranch- implements conditional execution (if-else logic)
+        RunnableLambda-> Wraps custom python functions into Runnable
+        RunnablePassthrough-> Just forwards input as output (acts as a placeholder
+
+
+    Most used chain in langchain
+    LLMChain
+    SequentialChain
+    SimpleSequential chain
+    Conversational retrieval chain
+    Retrieval QA
+    Router Chain
+    Multiprompt chain
+    Hyde Chain 
+    AgentExecutor Chain
+    SQL Database chain
+
+Analogy: Runnables Are Like Machines on a Factory Conveyor Belt
+    Imagine a factory where raw materials go in, pass through different machines,
+     and come out as a final product.
+
+        PromptTemplate = A machine that shapes the input into a proper question or instruction.
+
+        Model (LLM) = A machine that thinks and generates a response.
+
+        OutputParser = A machine that cleans and formats the result.
+
+    Each machine (runnable) is connected on a conveyor belt using the | pipe operator. 
+    The item (input) travels from one to the next, getting processed step by step.
