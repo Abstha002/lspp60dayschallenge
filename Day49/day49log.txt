@@ -1,0 +1,61 @@
+LSPP Day 49
+
+Today i learned:-
+
+Text Splitting
+Text splitting is the process of breaking large chunks of text (like articles, PDFs ,
+ HTML pages, or books) into smaller , manageable pieces (chuncks) that an LLM can handlle effectively.
+
+Large Text=> (chunk1, chunk2, chunk3)
+
+Overcoming model limitations:
+Many embedding models and languages and models  have maximum input size constraints .
+ Splitting allows us to process documents that would otherwise exceed these limits
+Money limit hunxa
+
+Downstream task-
+    Text splitting improves nearly every LLM powered task
+
+    Optimizing computational resources: 
+    working with smaller chunkcs of text can be more memory -efficient and allow for 
+    better parllelization of processing tasks.
+
+1.Length Based text splitting
+    Length-based text splitting means breaking up long text into chunks based on length, 
+    like the number of characters, tokens, or words, depending on your splitter type.
+
+    LangChain uses this idea to help prepare text for models that can’t handle large inputs all at once.
+
+How It Works
+You define:
+
+    chunk_size: how long each chunk should be
+    chunk_overlap: how much content should repeat between chunks (to preserve context)
+
+LangChain then slides over the text, creating overlapping chunks of the defined size.
+
+
+2.Text Structured Based
+Recursive Character text splitter(most used)
+Structured-based text splitting means breaking up text based on its internal structure, 
+such as sections, headers, paragraphs, bullet points, code blocks, or custom-defined formats
+ (like Markdown, HTML, JSON, etc.).
+
+Instead of blindly cutting by length, this approach respects the format and content boundaries, 
+making the chunks more meaningful for downstream tasks like RAG (Retrieval-Augmented Generation), summarization, or Q&A.
+
+3.Document-Structured Based 
+Document-structured based splitting refers to breaking down large documents into smaller, meaningful sections based 
+on their internal structure — like titles, chapters, sections, paragraphs, or metadata (e.g., author, source, timestamp).
+
+This method is smarter than plain length-based splitting because it understands the layout and logic of the document,
+ making it especially useful for AI tasks like semantic search, summarization, or question answering. 
+
+
+4.Semantic Meaning Based
+
+Semantic-based text splitting means breaking a large text into smaller parts based on the actual 
+meaning or topics being discussed, rather than just using length or document structure.
+
+This approach tries to group sentences or paragraphs that belong together contextually, 
+so the chunks remain coherent and meaningful when passed to an LLM or a retrieval system.
