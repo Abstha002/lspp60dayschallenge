@@ -1,0 +1,84 @@
+LSPP Day 51
+
+Today I learned:-
+
+What is Retrievers?
+
+    A retriever is a component in Langchain that fetchs relevant documents from a data 
+    source in response to a users query
+
+There are multiple types of retrievers
+All retrievers in Langchain are runnables
+
+Types of retriever
+    Based on data source
+        Wikipedia retriever
+        Vector store
+        Achieve Retriever
+    Based on search
+        MMR(Maximum Marginal Relevance)
+        Multi query
+        contextual comparsion
+
+Wikipedia Retriever
+    A wikipedia retriever is a a retriever that qierus the Wikipedia API to fetch 
+    relevant content for a given query
+
+How it works 
+    You give a query
+    it sends the query to wikipedia api
+    It retrieves teh most relevant articles
+    It returns them as Langchain documents objectsf
+
+vector store retriever
+    A vector store retriever in langchain is the most common type of retriever that 
+    lets you search and fetch documents from a vector store based on semantic similarity 
+    using vector embeddings.
+
+How it works
+    1.You store you documents in a vector store 
+    2.Each document is converted into a dense vector using an embedding model.
+    3.When the user enters a query
+        it's also turned into a vector 
+        the retriever compares the vector with the stored vectors
+        It retrievers the top k most similar ones
+
+
+Maximal Marginal Relevance(MMR)
+    MMR is an informational retrieval algorithm designed to reduce redundancy in the retrieved results while maintiang high relevance to the query.
+
+    Why MMR retriever?
+        In regular similarity search, you may get documents that are 
+            all very similar to each other
+            repeating the same info 
+            Lacking diverse perspective
+        MMR retriever avoids that by 
+            Picking the most releant document first
+            Then pickign the next most relevant and least similar to selected docs
+            And so on.
+
+            These helps especialy in RAG Pipeline.
+
+    Multi Query -retriever
+        Sometimes a single query might no capture all the ways informations is phrased in your documents
+        steps
+            1.Take your original query
+            2.Uses an LLM to generate mulitiple semanticvally different version of that query
+            3.performs retrieval for each sub -query
+            4.Combines and deduplicates the result
+
+    Contextual Compression Retriever
+    The contextual compression retriever in langchain is an advanced retriever that improves retrieval quality by compressing documents after retrieval - keeping only the relevant content based on the user's query.
+
+How it works
+    1. Base retriever
+    2. A compressor (usually an LLM is applied to each document.
+    3.The compressor keeps only the parts relevant to the query
+    4.Irrelevant context in discarded 
+      
+      When to use 
+        Your documets are long and contain mixed information
+        You want to reduce context length for LLM 
+        You need to improve answer accuracy in RAG pipelines
+        
+
