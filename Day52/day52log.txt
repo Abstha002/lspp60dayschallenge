@@ -1,0 +1,85 @@
+LSPP Day 52
+
+Today I learned:-
+
+What is RAG?
+    Query + Context → Prompt → LLM → Response
+    RAG (Retrieval-Augmented Generation) is a way to make a language model smarter by giving it extra information at the time you ask your question. This external knowledge allows the model to generate more accurate and relevant responses.
+
+Fine Tuning
+Supervised Tuning
+Prompt and desired output
+Supervised fine-tuning involves training a model on labeled data where each input has a corresponding expected output. This adjusts the model weights based on ground truth examples.
+
+Continued Pretraining
+Unsupervised
+Continued pretraining means training the model further using large-scale unlabelled data to adapt it to a domain or task without specific labels.
+
+RLHF
+Reinforcement Learning from Human Feedback
+RLHF involves fine-tuning a language model using feedback from humans (such as ranking responses) to align model outputs with human preferences.
+
+LoRA
+Low-Rank Adaptation
+LoRA is a parameter-efficient fine-tuning technique where small trainable matrices are added to existing model weights. It allows adapting large models using fewer resources.
+
+QLoRA
+Quantized LoRA
+QLoRA combines quantization with LoRA to reduce memory usage further. It allows fine-tuning large models on consumer hardware by compressing model weights.
+
+Process of Fine-Tuning
+Collect Data
+Gather the dataset appropriate for the task or domain.
+
+Choose a Method
+Select from supervised, RLHF, LoRA, etc., depending on your use case.
+
+Train for a Few Epochs
+Perform training iterations to adjust weights based on chosen method.
+
+Evaluate & Safety Test
+Measure model accuracy and assess for harmful or biased outputs.
+
+In-Context Learning
+In-context learning is a core capability of large language models like GPT-3/4, Claude, and LLaMA, where the model learns to solve a task purely by seeing examples in the prompt — without updating its weights.
+
+Emergent Property
+An emergent property is a behavior or ability that suddenly appears in a system when it reaches a certain scale or complexity — even though it was not explicitly programmed or expected from the individual components.
+
+Understanding RAG
+→ Indexing
+Creating an external knowledge base
+
+→ Retrieval
+Querying the external knowledge base to extract the needed part (e.g., a section of a video that answers a question — not the whole video)
+
+→ Augmentation
+Creating a prompt using retrieved context
+
+→ Generation
+When the prompt reaches the LLM, it generates a response
+
+Indexing
+Indexing is the process of preparing your knowledge base so that it can be efficiently searched at query time. It involves:
+
+Document Ingestion
+Load your source knowledge into memory (e.g., using PyPDFLoader, Notion loader, etc.).
+
+Text Chunking
+Break large documents into small, semantically meaningful chunks (Splitter).
+
+Embedding Generation
+Convert each chunk into a dense vector that captures its meaning (using models like Sentence Transformers or OpenAI Embeddings).
+
+Storage in a Vector Store
+Store the vector along with the original chunk text + metadata in a vector database (e.g., FAISS, Pinecone, Chroma).
+
+Retrieval
+Retrieval is the real-time process of finding the most relevant pieces of information from a pre-built index (created during indexing) based on the user’s question.
+
+Augmentation
+Augmentation refers to the step where the retrieved documents (chunks of relevant context) are combined with the user’s query to form a new, enriched prompt for the LLM.
+
+Generation
+Generation is the final step where a large language model uses the user’s query along with the retrieved and augmented context to generate a natural language response.
+
