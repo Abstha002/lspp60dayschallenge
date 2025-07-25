@@ -1,0 +1,50 @@
+LSPP Day 55
+
+Today i learned:-
+
+AL Agents
+
+An AI agent is a intelligent system that receives a high - level goal from a user,
+ and autonomously plans, decides, and executes a sequence of actions by using external tools, 
+ APIs or knowledge sources - all while maintaining context, reasoning over multiple steps, adapting to
+  new information, and optimizing for the intended outcome.
+
+Characteristics
+    Goal driven
+    Autonomous planning
+    Tool using 
+    Context-aware
+    Adaptive
+
+    ReAct
+
+    ReAct is s design pattern used in ai agents that stands for reasoning + Acting .
+     it allows a language model to interleave internal reasoning with external actions in a structured , multi step process.
+    Instead of generating an answer in one go, the model thinks step by step, deciding what i needs to do next and optionally 
+    calling tools (APIs, calculators, web search) to help it
+
+    ReAct is useful for:
+        Multi step problem
+        Tool augmented tasks (web search, database lookup etc)
+        Making the agents reasoning transparent and auditable
+
+    ReAct is all about ( Thought, Action, Observation ) loop.
+
+    Agent & Agent Executor
+
+    Agent Executor orchestrates the entire loop.
+    1.Sends inputs and previous message 
+    2.Gets the next action from agents
+    3.Executes that tool with provided input
+    4.Adds the tool's observation back into the history
+    5.Loops again with updated history until the agent says Final answer.
+
+    Flow of Ai agent
+
+        Agent Executor->Receive User Query
+        ->Pass user query+ agents scratap to agent
+        -> Agent response
+                agent action
+                agent Finish
+                    Return final output
+
