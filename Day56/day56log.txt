@@ -1,0 +1,62 @@
+
+LSPP Day 56
+
+Today i learned:-
+
+What is Generative AI?
+
+Generative Ai refers to a class of artificial intelligencen models that can create new content - such as text, 
+images , audio , code or video - that resembles human -created data.
+
+LLMs based apps like chat GPT
+Diffusion models for images
+Code generation LLMs like codeLLama
+TTS models like ElevenLabas
+Video gen models like Sora
+
+Generative AI  Vs Traditional AI
+ 
+ Traditional AI is abotu finding patterns in data and giving predictions.
+
+
+Generative Ai is about learning the distribution of data so that it can generate a new sample  from it.
+The best part of Generative AI it can mimic humans
+
+Application Areas
+    Creative and Business Writing
+    software Development
+    Customer Support
+    Education
+
+Generative AI is constantly evolving and improving
+
+Problem with LLM Based chat bot
+    Reactive 
+    No memory
+    Generic Advice
+    Can't take actions
+
+RAG Based Chatbot Problems
+    Reactive 
+    No memory
+    Can't take actions 
+
+Tool Augmented Chatbot Problems
+    Reactive 
+    No memory
+    Can't adapt
+
+Agentic ai solved
+    Reactive
+    No memory
+    speicific advice
+    can't take actions
+    can't adapt 
+
+Generative Ai is about creating content , Agentic ai is about solving a goal
+Generative Ai is reactive, Agentic Ai is proactive( autonomous)
+Generative Ai is a building block of Agentic AI
+Generative ai is subset of Agentic ai 
+Generative ai is capability whereas Agentic ai is behaviour
+
+
