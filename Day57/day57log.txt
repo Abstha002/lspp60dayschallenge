@@ -1,0 +1,116 @@
+LSPP Day 57
+
+Today i learned:-
+
+Agentic AI is a type of AI that can take up a task or goal 
+from a user then work toward completing it on its own , with minimal human guidance.
+It plans , takes action, adapts to changes, and seeks help only when necessary
+
+Key Characteristics
+    Autonomous
+    Goal Oriented 
+    Planning 
+    Reasoning
+    Adaptability
+    Context Awareness
+
+Autonomy
+    Autonomy refers to the Ai system's ability to make decisions and take 
+    actions on its own to achieve a given goal, without needing step by step 
+    human instructions
+
+    1. Our AI recruiter is autonomous
+    2.It's proactive
+    3.Auonomy in mulitple facets
+    4.Autonomy can be controlled
+    5. Autonomy can be dangerous
+
+Goal Oriented 
+    Being goal oriented means that the ai system operates with a persistent 
+    objective in mind and continously directs its actions to achieve that objective , 
+    rather than just responding to isolated prompts 
+    1. Goals acts as a compass for autonomy
+    2.Goals can come with constraints
+    3. Goals are stored in core memory
+    4.Goals can be altered
+
+Planning
+    Planning is the agent's ability to break down a high - level down a high level 
+    goal into a structured sequence of  actions or subgoals and decide the best path to 
+    achieve the desired outcome
+    Step 1: Generating multiple candidate plans
+    Step 2:Evaluate each plan
+    Step 3:Select the plan with the help of human
+
+Reasoning
+    Reasoing is the cognitive process through which an agentic ai system interprets 
+    informations, draws conclusions , and make decisions - both while planning ahead and 
+    while executing actio in real time .
+
+    Reasoning During planning:
+        1.Goad decomposition
+        2.tool selection
+        3.Resource esimation
+    Reasoning during execution
+        1.Decision making
+        2.HITL handling 
+        3.Error handling
+    
+    Adaptability
+        Adaptability is the agent's to modify its plan.s strategies  or actions in
+         response to unexpected conditions - all while staying aligned with the goal. 
+
+        1. Failures 
+        2.External feedbaack 
+        3.Chaning goals 
+
+    
+    Context Awareness
+        context awareness is the agent's ability to understand , retain and utilize
+         relevant information from the ongoing task, past interactions , user perferences , 
+         and environmental cues to make better decisions throughout a multi step process
+        1.Type of context
+        2.Context awareness is implemented through memory
+        3.Short team memory
+        4.Long term memory
+
+    Components of Agentic AI
+        Brain
+        Orchestrator
+        Tools
+        Memory
+        Supervisor
+
+        Brain
+            LLM is brain
+                Goal interpretation
+                planning
+                Reasoning
+                Tool Selection
+                Communication
+
+        Orchestrator
+            plan executor
+                Task sequencing
+                Conditional routing
+                Retry logic
+                Looping & iteration
+                Delegation
+            
+        Tools
+            hand and leg of agentic ai
+                External actions
+                knowledge base acces
+        
+        Memory
+            Short term memory
+            Long term memory
+            State Tracking
+        
+        Supervisor
+            Bridge betn human and agentic ai
+                Approval requents
+                Guardrails Enforcement
+                Edge case escalation
+        
+
