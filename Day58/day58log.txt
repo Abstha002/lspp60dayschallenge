@@ -1,0 +1,48 @@
+LSPP Day 58
+
+Today i learned:-
+
+What is langgraph?
+    LangGraph is a framework built on top of LangChain that lets you create stateful, multi-step AI workflows using graphs instead of simple linear chains.
+
+ In Simple Words:
+    LangGraph = LangChain + Graphs + Memory
+
+    It allows you to define nodes (steps like calling an LLM or doing logic) and edges (how outputs move between steps), giving you more control and flexibility.
+
+ Why use LangGraph?
+    1.Loops (e.g., re-ask if answer is bad)
+    2. Conditional logic (e.g., different steps for different inputs)
+    3.Memory/state management
+    4. Multi-agent workflows
+    5.Better suited for complex, non-linear tasks
+
+
+Difference between langchain and langgraph?
+    LangChain
+        A framework to build applications using language models.
+        It is Stateless
+
+    Feature	Description
+         Structure	Mostly linear chains or sequential pipelines
+        Easy to use	Good for simple prompts, chains, and tools
+     Limited control	Doesn’t support loops or complex branching well
+        Best for	Simple apps like chatbots, QA systems, and data pipelines
+
+     LangGraph
+        An extension of LangChain for stateful, graph-based workflows.
+        It is Stateful 
+
+    Feature	Description
+         Graph structure	Nodes (steps) and edges (transitions) like a flowchart
+        Supports loops	Yes — can repeat steps based on conditions
+        Conditional logic	Dynamic path selection based on state/output
+         Stateful memory	Keeps and updates memory between steps
+         Multi-agent ready	Designed for complex, multi-agent workflows
+         Best for	Advanced systems with memory, retry loops, and decision flows
+
+
+
+
+
+
