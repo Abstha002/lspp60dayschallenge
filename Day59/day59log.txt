@@ -1,0 +1,77 @@
+LSPP Day 59
+
+Today i Learned:-
+
+What is Langgraph?
+    LangGraph is an orchestration framewokf or build intelligent, stateful 
+    and multi-step LLM Workflows
+
+it enables advanced features like pareallelism , loops, branching, memory and
+ resumability -making it ideal for agentic and production grade AI applications. 
+
+It models your logic as a graph of nodes (tasks) and edges (routing) instead of a linear chain.
+
+LLM workflows
+
+1. LLM workflows are a step by step process using which we can build complex LLM Applications
+2.Each step in a workflow performs a distinct task - such as prompting, reasoning , 
+tool calling, memory access or decision - making. 
+3. Workflows can be liar, parallel , branched or looped allowing for complex behaviours 
+like retires, multi -agent communciation or tool - augmented reasoining 
+4.Common workflows
+        a.Prompt Chaining
+        b.Routing
+        c.Parallelization
+        d.Orchestrator workers
+        e.Evaluator Optimizer
+
+Graphs, Nodes, and Edges
+    Graph
+A complete workflow made of multiple connected steps (nodes) and transitions (edges).
+    Think of it like a flowchart or a state machine.
+    It controls the logic and flow of your LLM-powered system.
+
+ Node
+A single unit of work (e.g., calling an LLM, tool, function, or agent).
+    Each node does one task like summarizing text, making a decision, or calling a tool.
+
+Edge
+A connection between two nodes, often with a condition.
+    It defines which node to go to next, based on the output or state.
+
+
+    The system generates an essay topic, collects the student's submissiona nd evaluates it in parallel on depth of analysis ,language quiality and clarity of thorught. Based on the combined score. It either givees feedback for iporvement or approves the essay. 
+    Action Steps(
+    1.Generate Topic
+    2. Collect Essay
+    3.Evalute Eassy
+    4.Aggregate Result
+    5.Conditional routing
+    6.Give Feedback
+    7.CollectRevision
+    8. Show Success
+    )
+    to create Essay agent
+
+State 
+    in LangGraph, state is the shared memory that flows through your - workflow - 
+    it holds all the dat abeing passed between nodes as your graph runs.
+
+    State is created using TypedDict
+
+Reducers
+    Reducer in langgraph define how updates from nodes are applied to the shared state. 
+    Each key in the state can have its own reducer. which determnies whether new data 
+    replaces , merges or adds to the existing value. 
+
+LangGraph Execution model
+
+1. Graph Definition
+2.Compilation
+3.Invocation
+4.Super- step begin
+5.Mesage Passing & node Activation
+6.Halting condition
+
+
+
