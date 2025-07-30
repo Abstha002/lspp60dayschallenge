@@ -1,0 +1,35 @@
+LSPP Day 60
+LAST Day of LSPP 
+Have a journey Thank you Leapfrog ...
+Today i Learned:-
+
+Sequential workflow in LangGraph
+    A sequential workflow in LangGraph is like a step-by-step pipeline, where each node runs 
+    one after another — just like a chain, but with the added power of graph-based logic.
+
+    Think of it as:
+
+    Start → Step 1 → Step 2 → Step 3 → End
+
+    Each step is a node, and connections between them are edges.
+
+    Why Use Sequential in LangGraph?
+        Even though LangGraph is built for complex logic (like loops and branching), you can still define a simple,
+         linear workflow — just with more control, visibility, and state management.
+
+    Benefits:
+        Easy to add memory/state tracking
+        Can extend to branching later if needed
+        More transparent debugging with LangSmith integration
+
+Parallel Workflow in LangGraph
+
+    A parallel workflow in LangGraph lets you run multiple nodes at the same time, instead of one after another — 
+    like multitasking with different LLM tools or chains.
+
+Why Use It?
+Parallel is great when:
+
+    You want to run multiple tools (like web search + summarizer)
+    You want to compare answers from multiple LLMs
+    You want to speed up long workflows by multitasking
